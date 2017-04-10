@@ -1,29 +1,3 @@
-//SCROLL TO FUNCTIONS
-
-function scrollToBio() {
-  $("body").animate({ scrollTop: $(".section-about-me").offset().top}, 1500);
-}
-
-function scrollToWebsites() {
-  $("body").animate({ scrollTop: $(".section-web").offset().top}, 3000);
-}
-
-function scrollToApplications() {
-  $("body").animate({ scrollTop: $(".section-apps").offset().top}, 4000);
-}
-
-function scrollToBlog() {
-  $("body").animate({ scrollTop: $(".section-blog-center").offset().top}, 5000);
-}
-
-function scrollToContact() {
-  $("body").animate({ scrollTop: $(".section-contact").offset().top}, 6000);
-}
-function backToTop() {
-  $("body").animate({ scrollTop: 0}, 2500)
-}
-
-
 //OPEN WEBSITE FUNCTIONS
 
 function openCarla() {
@@ -46,73 +20,86 @@ function openCodePen() {
   window.open("https://codepen.io/ivanr553/");
 }
 
-//BLOG OVERFLOW FUNCTION
-
-function allowOverflow(element) {
-  if(element.style.overflowY == "hidden") {
-    element.style.overflowY = "scroll";
-  }
-  else {
-    element.style.overflowY = "hidden";
-  }
-}
-
-
 //GLOBAL VARS TO CHECK IF ELEMENT HAS BEEN OPENED
 
 let openAboutMeCheck = "false";
 let openWebsiteCheck = "false";
 let openAppsCheck = "false";
 let openBlogCheck = "false";
+let openContactCheck = "false";
 
 
-//CALLING ANIMATION FUNCTIONS
+//VAR TO CHECK FOR PREVIOUS SECTION TRANSLATED
+let previous = "landing";
 
-$(window).scroll(function() {
-  let wHeight = $(window).height();
-  let scrollT = $(this).scrollTop();
 
-    $(".about-me-info").css({
-      "transform" : "translate(0px, "+ scrollT /3 +"px)"
+//TRANSLATE PAGE LEFT
+
+function translateLeft(section) {
+
+  //CHECKING SECTION TO PROPERLY TRANSLATE
+  if(previous == section) {
+    return;
+  }
+  if(section != "landing") {
+    $("." + section).each(function() {
+      $(this).css({
+        "animation" : "translate-left 2s forwards",
+        "z-index" : "450"
+      })
     })
-    $(".about-me-span").each(function() {
-      if($(".about-me-span").css("font-size") < 12) {
-        $("about-me-span").css("font-size") = 12;
-      }
+  }
+  if(section == "landing") {
+    $("." + section).each(function() {
+      $(this).css({
+        "animation" : "translate-left-landing 2s forwards",
+        "z-index" : "450"
+      })
     })
+  }
+  if(previous != "landing") {
+    $("." + previous).each(function() {
+      $(this).css({
+        "animation" : "translate-left-more 2s forwards"
+      })
+    })
+  }
+  if(previous == "landing") {
+    $("." + previous).each(function() {
+      $(this).css({
+        "animation" : "translate-left 2s forwards"
+      })
+    })
+  }
 
-  if(scrollT > ($(".section-about-me").offset().top)*0.7 && scrollT < ($(".section-web").offset().top*0.5) && openAboutMeCheck === "false") {
-    openAboutMe();
+  //CALLING ANIMATIONS DEPENDING ON SECTION SELECTED
+  if(section == "section-about-me" && openAboutMeCheck === "false") {
+    setTimeout(function(){return openAboutMe()}, 2000);
     openAboutMeCheck = "true";
   }
-  if(scrollT < ($(".section-about-me").offset().top)*1.2) {
-    $("#back-to-top").css({
-      "display" : "none"
-    })
-  }
-  if(scrollT > ($(".section-about-me").offset().top)*1.2) {
-    $("#back-to-top").css({
-      "display" : "flex",
-      "animation" : "fade-in 1s forwards"
-    })
-  }
-  if(scrollT > ($(".section-web").offset().top)*0.9 && scrollT < ($(".section-apps").offset().top)*0.7 && openWebsiteCheck === "false") {
-    setTimeout(function(){return openWebsiteSection()}, 600);
+  if(section == "section-web" && openWebsiteCheck === "false") {
+    setTimeout(function(){return openWebsiteSection()}, 2000);
     openWebsiteCheck = "true";
   }
-  if(scrollT > ($(".section-apps").offset().top)*0.9 && scrollT < ($(".section-blog-center").offset().top)*0.8 && openAppsCheck === "false") {
-    setTimeout(function(){return openAppsSection()}, 600);
+  if(section == "section-apps" && openAppsCheck === "false") {
+    setTimeout(function(){return openAppsSection()}, 2000);
     openAppsCheck = "true";
   }
-  if(scrollT > ($(".section-blog-center").offset().top)*0.95 && scrollT < ($(".section-contact").offset().top)*0.85 && openBlogCheck === "false") {
-    setTimeout(function(){return openBlogSection()}, 600)
+  if(section == "section-blog" && openBlogCheck === "false") {
+    setTimeout(function(){return openBlogSection()}, 2000);
     openBlogCheck = "true";
   }
-  if(scrollT > ($(".section-contact").offset().top)*0.9) {
-    setTimeout(function(){return openContactSection()}, 600)
+  if(section == "section-contact" && openContactCheck === "false") {
+    setTimeout(function(){return openContactSection()}, 2000);
+    openContactCheck = "true";
   }
-})
 
+  //SETTING GLOBAL VAR PREVIOUS TO STORE PREVIOUS SECTION
+  previous = section;
+}
+
+
+//ANIMATION FUNCTION
 
 //ABOUT ME SECTION FUNCTIONS
 

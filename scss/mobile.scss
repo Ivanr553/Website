@@ -134,10 +134,8 @@ section {
   align-items: center;
   font-size: calc(12px + 0.5vw);
   font-family: "top";
-  padding-bottom: 0.3vh;
-  padding-top: 0.3vh;
+  padding-bottom: 0.2vh;
   border-bottom: solid 1px rgba(255, 255, 255, 0);
-  border-top: solid 1px rgba(255, 255, 255, 0);
   animation: hide-border 500ms forwards;
 }
 .landing-sym {
@@ -786,12 +784,12 @@ section {
 }
 @keyframes show-border {
   100% {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.8);
   }
 }
 @keyframes hide-border {
   0% {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.8);
   }
   100% {
     border-color: rgba(255, 255, 255, 0);

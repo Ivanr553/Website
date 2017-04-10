@@ -21,12 +21,31 @@
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
     <!-- scss -->
-      <link rel="stylesheet" href="scss/home-scss.scss">
+      <link rel="stylesheet" media='screen and (max-width: 1000px)' href="scss/mobile.scss">
+      <link rel="stylesheet" media='screen and (min-width: 1000px)' href="scss/home-scss.scss">
     <!-- title -->
       <title>Ivan Raffucci</title>
+    <!-- scripts -->
+      <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="javascript/jquery-plugins/panelsnap/jquery.panelSnap.js"></script>
   </head>
   <body>
-    <div class="landing">
+
+    <div class="nav-bar">
+      <div class="symbol landing-sym" onclick="translateLeft('landing')">Landing</div>
+      <div class="symbol about-sym" onclick="translateLeft('section-about-me')">About Me</div>
+      <div class="symbol websites-sym" onclick="translateLeft('section-web')">Websites</div>
+      <div class="symbol apps-sym" onclick="translateLeft('section-apps')">Applications</div>
+      <div class="symbol blog-sym" onclick="translateLeft('section-blog')">Blog</div>
+      <div class="symbol contact-sym" onclick="translateLeft('section-contact')">Contact Me</div>
+      <!-- <div class="bar"></div> -->
+    </div>
+    <section class="section landing">
 
       <div class="back-to-top" onclick="backToTop()" id="back-to-top"><div class="back-to-top-div">^</div></div>
 
@@ -36,18 +55,16 @@
       </span>
 
       <div id="landing-list">
-        <div class="list-item" id="list-ab" onclick="scrollToBio()">- About Me -</div>
-        <div class="list-item" id="list-web" onclick="scrollToWebsites()">- Websites -</div>
-        <div class="list-item" id="list-app" onclick="scrollToApplications()">- Web Applications -</div>
-        <div class="list-item" id="list-blog" onclick="scrollToBlog()">- Blog -</div>
-        <div class="list-item" id="list-contact" onclick="scrollToContact()">- Contact -</div>
+        <div class="list-item" id="list-freelancer">- Freelancer -</div>
+        <div class="list-item" id="list-web">- Web Developer -</div>
+        <!-- <div class="list-item" id="list-extra">- Blogger -</div> -->
       </div>
 
-      <div class="bottom-bar" onclick="scrollToBio()"><div class="down-carrot">^</div></div>
-    </div>
+
+    </section>
 
 
-    <div class="section-about-me">
+    <section class="section section-about-me">
       <div class="about-me-title machine default">
         About Me
         <div class="about-me-bar "></div>
@@ -57,14 +74,9 @@
         <br><br>
         I am a lover of health, music, the earth, and people. I enjoy weight lifting and believe that good health is something everyone should strive for to live the best life they can. I have also played low brass for around 12 years and enjoy playing music at home on my trombone and euphonium. The world we live in is the only one we have and I make it a goal of mine everyday to ensure we live sustainabily and responsibly in order to ensure a bright future for generations to come. I hope to share this idea through web development and allow other like-minded groups the opportunity to share their goals and mission through the internet and technology.
       </div>
-    </div>
+    </section>
 
-
-    <div class="filler">
-    </div>
-
-
-    <div class="section-web">
+    <section class="section section-web">
       <div class="section-web-title machine">Websites</div>
         <div class="website-block serif" id="carla" onclick="openCarla()">
           Interior Designer: Carla Kunkel
@@ -74,18 +86,9 @@
           Restuarant: Tokiwa Sushi
           <div class="grey-cover"></div>
         </div>
-    </div>
+    </section>
 
-
-    <div class="filler">
-    </div>
-
-
-    <div class="filler apps">
-    </div>
-
-
-    <div class="section-apps">
+    <section class="section section-apps">
       <div class="git" onclick="openGitHub()"></div>
       <div class="codepen" onclick="openCodePen()"></div>
       <div class="application-title" id="application-title" onclick="openApps()">Web Applications</div>
@@ -114,15 +117,10 @@
         </div>
       </div>
 
-    </div>
+    </section>
 
-
-    <div class="filler apps">
-    </div>
-
-
-    <div class="section-blog">
-      <div class="section-blog-center">
+    <span class="section-blog">
+      <section class="section section-blog-center">
         <h1 class="machine blog-title">The Free Coder Blog</h1>
         <div class="blog-info default">
           Come check out my <a href="file:///C:/Users/ivanr/Documents/Webdev/webtemps/Revamp/Blog/blog-1.html" target="blank">Blog</a>!
@@ -131,15 +129,10 @@
           <br><br>
           I plan to delve into other topics as I grow including: being a self taught coder, back end programming, web design, web development, and much more!
         </div>
-      </div>
-    </div>
+      </section>
+    </span>
 
-
-    <div class="filler contact-filler">
-    </div>
-
-
-    <div class="section-contact">
+    <section class="section section-contact">
       <div class="contact-title">Let's get in touch!</div>
       <div class="contact-info">
         Email me at: <a class="contact-info-email" href="mailto:ivanrwebd@gmail.com">ivanrwebd@gmail.com</a>
@@ -147,15 +140,9 @@
       <div class="contact-info-bottom">
         Ivan Raffucci
       </div>
-    </div>
+    </section>
 
 
   </body>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="javascript/home-js.js"></script>
 </html>

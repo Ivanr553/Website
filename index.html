@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--  favicon tags -->
+      <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+    <!-- scss -->
+      <link rel="stylesheet" href="scss/home-scss.scss">
+    <!-- title -->
+      <title>Ivan Raffucci</title>
+  </head>
+  <body>
+    <div class="landing">
+
+      <div class="back-to-top" onclick="backToTop()" id="back-to-top"><div class="back-to-top-div">^</div></div>
+
+      <span class="serif" id="name">
+        Ivan Raffucci
+        <br><div class="top" id="web-dev-landing">Web Development</div>
+      </span>
+
+      <div id="landing-list">
+        <div class="list-item" id="list-ab" onclick="scrollToBio()">- About Me -</div>
+        <div class="list-item" id="list-web" onclick="scrollToWebsites()">- Websites -</div>
+        <div class="list-item" id="list-app" onclick="scrollToApplications()">- Web Applications -</div>
+        <div class="list-item" id="list-blog" onclick="scrollToBlog()">- Blog -</div>
+        <div class="list-item" id="list-contact" onclick="scrollToContact()">- Contact -</div>
+      </div>
+
+      <div class="bottom-bar" onclick="scrollToBio()"><div class="down-carrot">^</div></div>
+    </div>
+
+
+    <div class="section-about-me">
+      <div class="about-me-title machine default">
+        About Me
+        <div class="about-me-bar "></div>
+      </div>
+      <div class="about-me-info default">
+        My name is Ivan Raffucci, welcome to my website! I started my journey into web development by the simple desire to understand the technology and software that we rely on every day to live our lives. In my search to understand software, I found the joy and wonder of creating technology and the benefit that these creations can bring to those who have need of them. It is my belief that through web development and programming, we can create techonolgy that can better society and help people to expand their horizons and achieve their goals.
+        <br><br>
+        I am a lover of health, music, the earth, and people. I enjoy weight lifting and believe that good health is something everyone should strive for to live the best life they can. I have also played low brass for around 12 years and enjoy playing music at home on my trombone and euphonium. The world we live in is the only one we have and I make it a goal of mine everyday to ensure we live sustainabily and responsibly in order to ensure a bright future for generations to come. I hope to share this idea through web development and allow other like-minded groups the opportunity to share their goals and mission through the internet and technology.
+      </div>
+    </div>
+
+
+    <div class="filler">
+    </div>
+
+
+    <div class="section-web">
+      <div class="section-web-title machine">Websites</div>
+        <div class="website-block serif" id="carla" onclick="openCarla()">
+          Interior Designer: Carla Kunkel
+          <div class="grey-cover"></div>
+        </div>
+        <div class="website-block serif" id="tokiwa" onclick="openTokiwa()">
+          Restuarant: Tokiwa Sushi
+          <div class="grey-cover"></div>
+        </div>
+    </div>
+
+
+    <div class="filler">
+    </div>
+
+
+    <div class="filler apps">
+    </div>
+
+
+    <div class="section-apps">
+      <div class="git" onclick="openGitHub()"></div>
+      <div class="codepen" onclick="openCodePen()"></div>
+      <div class="application-title" id="application-title" onclick="openApps()">Web Applications</div>
+
+      <div class="bubble-wrap"><div class="bubble raincheck" onclick="openRaincheckInfo()" id="raincheck"></div></div>
+
+      <div class="information-container">
+        <div class="raincheck-information">
+          <p class="black raincheck-information-title">Raincheck Application</p>
+          <p class="raincheck-information-body">
+          This is the very first web application I have deployed online.
+          The inspiration for the app came to me from an outdated system at work.
+          Customer orders were being handled both on paper and digitally leading to a lack of clarity and organization. I felt it would increase productivity and give me a great learning opportunity to create a digital space that managed these orders.
+          I began my work on this poroject on March 19, 2017 and deployed it to heroku on April 3, 2017.
+          This application was a project to both learn the fundamentals of back-end programming
+          and also to create a tool that provided value in a work environment. I now use this application every week to organize and streamline the customer order process at my workplace.
+          </p>
+          <p class="black machine raincheck-langs-title"><b>Languages and Frameworks:</b></p>
+          <div class="center raincheck-langs black">
+            <span>-Node.js</span>
+            <span>-MongoDB</span>
+            <span>-Express</span>
+            <span>-Handlebars</span>
+            <span>-HTMl, CSS, Javascript</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="filler apps">
+    </div>
+
+
+    <div class="section-blog">
+      <div class="section-blog-center">
+        <h1 class="machine blog-title">The Free Coder Blog</h1>
+        <div class="blog-info default">
+          Come check out my <a href="file:///C:/Users/ivanr/Documents/Webdev/webtemps/Revamp/Blog/blog-1.html" target="blank">Blog</a>!
+          <br><br>
+          I am an entirely self-taught coder and because of this I felt it would benefit me and others like me to write about my experiences. I love javascript and have focused my blog around the language and talking about the new features included in es6.
+          <br><br>
+          I plan to delve into other topics as I grow including: being a self taught coder, back end programming, web design, web development, and much more!
+        </div>
+      </div>
+    </div>
+
+
+    <div class="filler contact-filler">
+    </div>
+
+
+    <div class="section-contact">
+      <div class="contact-title">Let's get in touch!</div>
+      <div class="contact-info">
+        Email me at: <a class="contact-info-email" href="mailto:ivanrwebd@gmail.com">ivanrwebd@gmail.com</a>
+      </div>
+      <div class="contact-info-bottom">
+        Ivan Raffucci
+      </div>
+    </div>
+
+
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="javascript/home-js.js"></script>
+</html>

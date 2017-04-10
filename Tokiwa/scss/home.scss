@@ -1,0 +1,239 @@
+@font-face{
+  font-family: "brush";
+  src: url("fonts/Dry-Brush.ttf") format("truetype");
+}
+body, html{
+  margin: 0;
+  border: none;
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("images/menus.jpg");
+}
+header{
+  background-image: url("images/sushi-back-edit.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 110vh;
+  padding: none;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+.mySlides{
+  position: absolute;
+  opacity: 0;
+}
+.nav-bar{
+  top: 0;
+  width: 100vw;
+  height: 7vh;
+  opacity: 1;
+  padding: 0.5vh;
+  position: fixed;
+  z-index: 1;
+}
+.nav-btn{
+  height: 100%;
+  width: 11vw;
+  font-size: 2.7vh;
+  float: right;
+  color: white;
+  opacity: 0.7;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 0px 0.2vh 0px 0.2vh;
+  border-radius: 0.5vh;
+}
+.nav-btn:hover{
+  animation: brighten 500ms forwards;
+}
+.body-div-1{
+  height: 110vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 5px 40px -5px black;
+}
+.bar{
+  width: 60vw;
+  background-color: grey;
+  height: 0.5vh;
+  position: absolute;
+}
+#top-body-bar{
+  top: 27vh;
+}
+#bottom-body-bar{
+  bottom: 22vh;
+}
+.fill{
+  height: 100vh;
+}
+.body-div-2{
+  height: 120vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  box-shadow: inset 0 5px 30px -8px black;
+}
+.body-div-images {
+  display: flex;
+  margin: auto;
+  height: 25vw;
+  width: 38vw;
+  position: relative;
+}
+.body-div-images-plus {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 3vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-size: 2vw;
+}
+.body-div-images-minus {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 4vw;
+  position: absolute;
+  left: 0vw;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-size: 2vw;
+}
+.myslides-span{
+  color: black;
+  font-size: 3vw;
+  font-style: italic;
+}
+.mySlides-span-2 {
+  display: flex;
+}
+.body-div-2-cont{
+  width: 38vw;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.image-span{
+  font-size: 3vh;
+  color: white;
+  margin-top: 3vh;
+}
+#top-myslides-bar{
+ width: 33vw;
+ top: -6vh;
+}
+#bottom-myslides-bar{
+  width: 33vw;
+  bottom: -6vh;
+}
+.body-bar{
+  width: 100vw;
+  height: 40vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  padding: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.span-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+}
+.body-span{
+  font-size: 6vmax;
+  font-family: "brush";
+}
+.body-p{
+  width: 40vw;
+  font-size: default;
+  margin: 0 auto 0 auto;
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 3vh;
+}
+.bottom {
+  text-align: center;
+  color: black;
+  font-size: 3vh;
+  margin: auto;
+  font-style: italic;
+  letter-spacing: .1vh
+}
+
+#logo {
+  float: left;
+}
+#yelp-btn {
+  margin-right: 2.2vw;
+}
+#bottom-bar {
+  background-color: rgba(249, 249, 249, 0.9);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+  height: 40vh;
+  box-shadow: 0 -5px 40px -15px black;
+}
+
+@keyframes fade-in{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes brighten {
+  100% {
+    opacity: 1;
+  }
+}

@@ -786,12 +786,12 @@ section {
 }
 @keyframes show-border {
   100% {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.6);
   }
 }
 @keyframes hide-border {
   0% {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.6);
   }
   100% {
     border-color: rgba(255, 255, 255, 0);

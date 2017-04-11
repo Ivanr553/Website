@@ -72,6 +72,26 @@ function translateLeft(section) {
     })
   }
 
+  //CALLING NAV BAR ANIMATIONS
+  if(section == "landing") {
+    animateNavBar("landing-sym");
+  }
+  if(section == "section-about-me") {
+    animateNavBar("about-sym");
+  }
+  if(section == "section-web") {
+    animateNavBar("websites-sym");
+  }
+  if(section == "section-apps") {
+    animateNavBar("apps-sym");
+  }
+  if(section == "section-blog") {
+    animateNavBar("blog-sym");
+  }
+  if(section == "section-contact") {
+    animateNavBar("contact-sym");
+  }
+
   //CALLING ANIMATIONS DEPENDING ON SECTION SELECTED
   if(section == "section-about-me" && openAboutMeCheck === "false") {
     setTimeout(function(){return openAboutMe()}, 2000);
@@ -234,3 +254,37 @@ function openContactSection() {
     })
   })
 }
+
+function animateNavBar(inputClass) {
+  $(".symbol").each(function() {
+    if(!($(this).hasClass(inputClass))) {
+      $(this).css({
+        "cursor" : "pointer",
+        "border-color" : "rgba(255, 255, 255, 0)"
+      })
+      $(this).hover(function(){
+        $(this).addClass("sym-hover");
+        $(this).removeClass("sym-hover-off");
+      }, function() {
+        $(this).removeClass("sym-hover");
+        $(this).addClass("sym-hover-off");
+      })
+    }
+    else {
+      $(this).removeClass("sym-hover-off");
+      $(this).removeClass("sym-hover");
+      $(this).hover(function(){
+        $(this).removeClass("sym-hover-off");
+        $(this).removeClass("sym-hover");
+      })
+      $(this).css({
+        "cursor" : "default",
+        "border-color" : "rgba(255, 255, 255, 0.6)"
+      })
+
+    }
+  });
+}
+
+//CALL FUNCTION INITIALLY TO GENERATE HOVER ANIMATIONS
+animateNavBar("landing-sym")

@@ -138,43 +138,48 @@ section {
   padding-top: 0.3vh;
   border-bottom: solid 1px rgba(255, 255, 255, 0);
   border-top: solid 1px rgba(255, 255, 255, 0);
-  animation: hide-border 500ms forwards;
 }
 .landing-sym {
   color: rgb(20, 59, 122)
 }
-.landing-sym:hover {
-  animation: show-border 1s forwards;
-}
+// .landing-sym:hover {
+//   animation: show-border 1s forwards;
+// }
 .about-sym {
   color: lightblue;
 }
-.about-sym:hover {
-  animation: show-border 1s forwards;
-}
+// .about-sym:hover {
+//   animation: show-border 1s forwards;
+// }
 .websites-sym {
   color: white;
 }
-.websites-sym:hover {
-  animation: show-border 1s forwards;
-}
+// .websites-sym:hover {
+//   animation: show-border 1s forwards;
+// }
 .apps-sym {
   color: orange;
 }
-.apps-sym:hover {
-  animation: show-border 1s forwards;
-}
+// .apps-sym:hover {
+//   animation: show-border 1s forwards;
+// }
 .blog-sym {
   color: rgb(71, 142, 105);
 }
-.blog-sym:hover {
-  animation: show-border 1s forwards;
-}
+// .blog-sym:hover {
+//   animation: show-border 1s forwards;
+// }
 .contact-sym {
   color: grey;
 }
-.contact-sym:hover {
-  animation: show-border 1s forwards;
+// .contact-sym:hover {
+//   animation: show-border 1s forwards;
+// }
+.sym-hover {
+  animation: show-border 500ms forwards;
+}
+.sym-hover-off {
+  animation: hide-border 500ms forwards;
 }
 
 .landing {

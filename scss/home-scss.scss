@@ -339,9 +339,7 @@ section {
   animation-delay: 500ms;
 }
 
-.apps {
-  background-color: rgba(237, 67, 30, 0.8);
-}
+
 .section-apps {
   height: 100vh;
   width: 100vw;
@@ -464,26 +462,28 @@ section {
 }
 .raincheck-information-title {
   margin-top: 0;
-  font-size: calc(20px + 1vw);
+  margin-bottom: 1.5vh;
+  font-size: calc(18px + 1vw);
   font-family: "machine";
   text-decoration: underline;
 }
 .raincheck-information-body {
-  font-size: calc(5px + 0.7vw);
+  font-size: calc(4px + 0.7vw);
   width: 90%;
   letter-spacing: 0.1vh;
-  margin: auto auto auto 0;
+  margin: 1.5vh auto auto 1.5vh;
   font-family: serif;
   color: rgba(10, 10, 10, 1);
 }
 .raincheck-langs-title {
-  font-size: calc(20px + 1vw);
+  font-size: calc(15px + 1vw);
+  margin-top: 1.5vh;
 }
 .raincheck-langs {
   margin-left: 2vw;
-  margin-top: -1vh;
+  margin-top: -2vh;
   font-family: serif;
-  font-size: calc(8px + 1vw);
+  font-size: calc(6px + 0.8vw);
 }
 
 

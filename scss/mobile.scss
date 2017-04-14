@@ -49,6 +49,9 @@ section {
 .grey {
   color: grey;
 }
+.blue {
+  color: blue;
+}
 .center {
   display: flex;
   flex-direction: column;
@@ -141,38 +144,20 @@ section {
 .landing-sym {
   color: rgb(20, 59, 122)
 }
-.landing-sym:hover {
-  animation: show-border 1s forwards;
-}
 .about-sym {
   color: lightblue;
-}
-.about-sym:hover {
-  animation: show-border 1s forwards;
 }
 .websites-sym {
   color: white;
 }
-.websites-sym:hover {
-  animation: show-border 1s forwards;
-}
 .apps-sym {
   color: orange;
 }
-.apps-sym:hover {
-  animation: show-border 1s forwards;
-}
 .blog-sym {
-  color: rgb(71, 142, 105);
-}
-.blog-sym:hover {
-  animation: show-border 1s forwards;
+  color: rgb(59, 173, 31);
 }
 .contact-sym {
   color: grey;
-}
-.contact-sym:hover {
-  animation: show-border 1s forwards;
 }
 
 .landing {
@@ -253,7 +238,7 @@ section {
   align-items: center;
   justify-content: center;
   z-index: 3;
-  opacity: 0;
+  opacity: 1;
 }
 .about-me-bar {
   width: 80%;
@@ -267,7 +252,7 @@ section {
   min-width: 400px;
   height: auto;
   max-height: 60vh;
-  font-size:calc(7px + 1.5vmin);
+  font-size:calc(15px);
   padding: 2vw;
   padding-left: 0;
   position: absolute;
@@ -275,15 +260,15 @@ section {
   letter-spacing: 1px;
   left: 3vw;
   z-index: 2;
-  opacity: 0;
+  opacity: 1;
 }
+
 
 .section-web {
   height: 100vh;
   width: 100%;
-  max-width: 99.6%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
@@ -294,17 +279,17 @@ section {
   margin: 0;
 }
 .section-web-title {
-  font-size: calc(25px + 3.8vw);
+  font-size: 30px;
   position: absolute;
-  border: solid 0.4vw black;
   padding: 0.8vw;
   cursor: default;
+  top: 5vh;
 }
 .website-block {
-  display: none;
-  width: 50%;
-  height: 60vh;
-  margin: auto auto 6vh auto;
+  display: flex;
+  width: 100%;
+  height: 35vh;
+  margin: auto auto 0 auto;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -312,7 +297,7 @@ section {
   cursor: pointer;
   filter: grayscale(20%);
   font-size: calc(10px + 1.5vw);
-  opacity: 0;
+  opacity: 1;
 }
 .grey-cover {
   width: 100%;
@@ -335,6 +320,8 @@ section {
   background-image: url("images/Tokiwa-Web.png");
   color: white;
   animation-delay: 500ms;
+  margin-top: 0;
+  margin-bottom: 6vh;
 }
 
 .apps {
@@ -388,15 +375,11 @@ section {
   animation: git-hover 500ms forwards;
 }
 .application-title {
-  font-size: calc(25px + 3.8vw);
-  color: rgb(10, 10, 10);
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 30px;
+  position: absolute;
+  padding: 0.8vw;
   cursor: default;
-  border: solid 0.3vw black;
-  padding: 0.5vw;
+  top: 9vh;
   z-index: 4;
   font-family: "machine";
 }
@@ -413,44 +396,41 @@ section {
   z-index: 2;
 }
 .bubble-wrap {
+  width: 100px;
+  height: 100px;
   margin-top: 10vh;
 }
 .bubble {
-  height: 8vw;
-  min-height: 100px;
-  width: 8vw;
-  min-width: 100px;
+  width: 100%;
+  height: 100%;
   font-size: calc(11px + 1vw);
   border-radius: 2vw;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  cursor: default;
   text-align: center;
   background-size: cover;
   background-position: center;
   position: relative;
-  opacity: 0;
+  opacity: 1;
   z-index: 3;
 }
 .raincheck {
   background-image: url("images/raincheck.png");
 }
 .information-container {
-  width: 40vw;
+  width: 80vw;
   height: auto;
   display: none;
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  right: 5vw;
   padding: 1vw;
   z-index: 2;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 6vh;
   opacity: 0;
-  background-color: rgba(255, 255, 255, 0.1);
   user-select: none;
   cursor: default;
   border-radius: 0.5vw;
@@ -462,14 +442,13 @@ section {
 }
 .raincheck-information-title {
   margin-top: 0;
-  font-size: calc(20px + 1vw);
+  font-size: 30px;
   font-family: "machine";
   text-decoration: underline;
 }
 .raincheck-information-body {
-  font-size: calc(5px + 0.7vw);
+  font-size: 16px;
   width: 90%;
-  letter-spacing: 0.1vh;
   margin: auto auto auto 0;
   font-family: serif;
   color: rgba(10, 10, 10, 1);
@@ -481,7 +460,7 @@ section {
   margin-left: 2vw;
   margin-top: -1vh;
   font-family: serif;
-  font-size: calc(8px + 1vw);
+  font-size: 16px;
 }
 
 
@@ -508,22 +487,23 @@ section {
   align-items: center;
 }
 .blog-title {
-  border: solid 0.3vw black;
-  padding: 1vw;
-  background-color: rgba(255, 255, 255, 0.1);
-  cursor: default;
+  font-size: 30px;
   position: absolute;
-  font-size: calc(20px + 2.5vw);
+  padding: 0.8vw;
+  cursor: default;
+  top: 9vh;
+  z-index: 4;
+  font-family: "machine";
 }
 .blog-info {
-  font-size: calc(8px + 1vw);
-  width: 50vw;
+  font-size: 20px;
+  width: 80vw;
   height: auto;
   background-color: rgba(255, 255, 255, 0.4);
   padding: 2vw 1.5vw 2vw 1.5vw;
   border-radius: 1vw;
-  opacity: 0;
-  display: none;
+  opacity: 1;
+  display: block;
   font-family: "top";
   margin-top: 15vh;
 }
@@ -547,24 +527,24 @@ section {
 .contact-title {
   color: white;
   font-family: "top";
-  font-size: 3.5vw;
+  font-size: 30px;
   position: absolute;
   top: 10vh;
   left: 12vw;
-  opacity: 0;
+  opacity: 1;
 }
 .contact-info {
   width: auto;
   height: auto;
   color: rgb(210, 210, 210);
   font-family: "top";
-  font-size: 2.5vw;
+  font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
-  opacity: 0;
+  opacity: 1;
 }
 .contact-info-email {
   display: inline-flex;
@@ -572,12 +552,11 @@ section {
 .contact-info-bottom {
   color: rgb(210, 210, 210);
   font-family: "top";
-  font-size: 3.5vw;
+  font-size: 30px;
   position: absolute;
   right: 3vw;
   bottom: 7vh;
-  display: none;
-  opacity: 0;
+  opacity: 1;
 }
 .contact-filler {
   background-color: rgb(20, 20, 20);
@@ -668,22 +647,6 @@ section {
     transform: translatex(0vh)
   }
 }
-@keyframes app-hover {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes app-hover-off {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.8;
-  }
-}
 @keyframes slide-up {
   0% {
     transform: translatey(0);
@@ -744,20 +707,6 @@ section {
     opacity: 1;
   }
 }
-@keyframes git-hover {
-  100% {
-    opacity: 0.8;
-  }
-}
-
-@keyframes git-hover-off {
-  0% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
 @keyframes translate-left {
   0% {
     transform: translatex(0);
@@ -793,5 +742,15 @@ section {
   }
   100% {
     border-color: rgba(255, 255, 255, 0);
+  }
+}
+@keyframes grow-bubble-fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
   }
 }

@@ -20,6 +20,7 @@ function openCodePen() {
   window.open("https://codepen.io/ivanr553/");
 }
 
+
 //GLOBAL VARS TO CHECK IF ELEMENT HAS BEEN OPENED
 
 let openAboutMeCheck = "false";
@@ -72,46 +73,51 @@ function translateLeft(section) {
     })
   }
 
-  //CALLING NAV BAR ANIMATIONS
-  if(section == "landing") {
-    animateNavBar("landing-sym");
-  }
-  if(section == "section-about-me") {
-    animateNavBar("about-sym");
-  }
-  if(section == "section-web") {
-    animateNavBar("websites-sym");
-  }
-  if(section == "section-apps") {
-    animateNavBar("apps-sym");
-  }
-  if(section == "section-blog") {
-    animateNavBar("blog-sym");
-  }
-  if(section == "section-contact") {
-    animateNavBar("contact-sym");
-  }
+  if($(window).width() > 1000) {
+//==================IF DESKTOP====================
 
-  //CALLING ANIMATIONS DEPENDING ON SECTION SELECTED
-  if(section == "section-about-me" && openAboutMeCheck === "false") {
-    setTimeout(function(){return openAboutMe()}, 2000);
-    openAboutMeCheck = "true";
-  }
-  if(section == "section-web" && openWebsiteCheck === "false") {
-    setTimeout(function(){return openWebsiteSection()}, 2000);
-    openWebsiteCheck = "true";
-  }
-  if(section == "section-apps" && openAppsCheck === "false") {
-    setTimeout(function(){return openAppsSection()}, 2000);
-    openAppsCheck = "true";
-  }
-  if(section == "section-blog" && openBlogCheck === "false") {
-    setTimeout(function(){return openBlogSection()}, 2000);
-    openBlogCheck = "true";
-  }
-  if(section == "section-contact" && openContactCheck === "false") {
-    setTimeout(function(){return openContactSection()}, 2000);
-    openContactCheck = "true";
+      //CALLING NAV BAR ANIMATIONS
+      if(section == "landing") {
+        animateNavBar("landing-sym");
+      }
+      if(section == "section-about-me") {
+        animateNavBar("about-sym");
+      }
+      if(section == "section-web") {
+        animateNavBar("websites-sym");
+      }
+      if(section == "section-apps") {
+        animateNavBar("apps-sym");
+      }
+      if(section == "section-blog") {
+        animateNavBar("blog-sym");
+      }
+      if(section == "section-contact") {
+        animateNavBar("contact-sym");
+      }
+
+      //CALLING ANIMATIONS DEPENDING ON SECTION SELECTED
+      if(section == "section-about-me" && openAboutMeCheck === "false") {
+        setTimeout(function(){return openAboutMe()}, 2000);
+        openAboutMeCheck = "true";
+      }
+      if(section == "section-web" && openWebsiteCheck === "false") {
+        setTimeout(function(){return openWebsiteSection()}, 2000);
+        openWebsiteCheck = "true";
+      }
+      if(section == "section-apps" && openAppsCheck === "false") {
+        setTimeout(function(){return openAppsSection()}, 2000);
+        openAppsCheck = "true";
+      }
+      if(section == "section-blog" && openBlogCheck === "false") {
+        setTimeout(function(){return openBlogSection()}, 2000);
+        openBlogCheck = "true";
+      }
+      if(section == "section-contact" && openContactCheck === "false") {
+        setTimeout(function(){return openContactSection()}, 2000);
+        openContactCheck = "true";
+      }
+
   }
 
   //SETTING GLOBAL VAR PREVIOUS TO STORE PREVIOUS SECTION
@@ -195,19 +201,48 @@ function addHoverAnim() {
 }
 
 function openRaincheckInfo() {
-  $(".information-container").each(function() {
-    $(this).css({
-      "display" : "flex",
-      "animation" : "fade-in 1s forwards",
-      "animation-delay" : "1s"
+  if($(window).width() < 1000) {
+    //==================IF MOBILE====================
+
+
+    $(".information-container").each(function() {
+      $(this).css({
+        "display" : "flex",
+        "animation" : "fade-in 1s forwards",
+        "animation-delay" : "1s"
+      })
     })
-  })
-  $(".bubble-wrap").each(function() {
-    $(this).css({
-      "animation" : "move-left 1.5s forwards"
+    $(".bubble-wrap").each(function() {
+      $(this).css({
+        "animation" : "grow-bubble-fade 1.5s forwards"
+      })
     })
-  })
-  setTimeout(function(){return $("#raincheck").attr("onclick", "openRaincheck()")}, 2000);
+    setTimeout(function() {
+      return $(".bubble-wrap")
+        .each(function() {
+          $(this).css({
+            "display" : "none"
+          })
+      })}, 1500);
+    setTimeout(function(){return $("#raincheck").attr("onclick", "openRaincheck()")}, 2000);
+  }
+  else {
+    //==================IF DESKTOP====================
+
+    $(".information-container").each(function() {
+      $(this).css({
+        "display" : "flex",
+        "animation" : "fade-in 1s forwards",
+        "animation-delay" : "1s"
+      })
+    })
+    $(".bubble-wrap").each(function() {
+      $(this).css({
+        "animation" : "move-left 1.5s forwards"
+      })
+    })
+    setTimeout(function(){return $("#raincheck").attr("onclick", "openRaincheck()")}, 2000);
+  }
 }
 
 
@@ -254,6 +289,9 @@ function openContactSection() {
     })
   })
 }
+
+
+//NAVIGATION BAR ANIMATION
 
 function animateNavBar(inputClass) {
   $(".symbol").each(function() {

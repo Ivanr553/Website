@@ -399,6 +399,7 @@ section {
   width: 100px;
   height: 100px;
   margin-top: 10vh;
+  position: absolute;
 }
 .bubble {
   width: 100%;
@@ -435,7 +436,7 @@ section {
   opacity: 0;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 // .raincheck-information-title {
 //   margin-top: 0;

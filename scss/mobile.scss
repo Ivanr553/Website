@@ -34,6 +34,7 @@ h1 {
 }
 section {
   margin: 0;
+  overflow-y: hidden;
 }
 
 /*GENERIC CLASSES*/
@@ -128,14 +129,14 @@ section {
 .symbol {
   width: auto;
   height: auto;
-  margin: auto 3vw auto 3vw;
+  margin: auto 1vw auto 1vw;
   z-index: 600;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: calc(12px + 0.5vw);
+  font-size: 12px;
   font-family: "top";
   padding-bottom: 0.2vh;
   border-bottom: solid 1px rgba(255, 255, 255, 0);
@@ -420,7 +421,7 @@ section {
   background-image: url("images/raincheck.png");
 }
 .information-container {
-  width: 80vw;
+  width: 100vw;
   height: auto;
   display: none;
   flex-direction: column;
@@ -442,25 +443,27 @@ section {
 }
 .raincheck-information-title {
   margin-top: 0;
-  font-size: 30px;
+  margin-left: 5vw;
+  font-size: 18px;
   font-family: "machine";
   text-decoration: underline;
 }
 .raincheck-information-body {
-  font-size: 16px;
-  width: 90%;
-  margin: auto auto auto 0;
+  font-size: 12px;
+  width: 95%;
+  margin: auto;
   font-family: serif;
   color: rgba(10, 10, 10, 1);
 }
 .raincheck-langs-title {
-  font-size: calc(20px + 1vw);
+  font-size: 18px;
+  margin-left: 4vw;
 }
 .raincheck-langs {
-  margin-left: 2vw;
+  margin-left: 8vw;
   margin-top: -1vh;
   font-family: serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 

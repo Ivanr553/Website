@@ -431,7 +431,11 @@ section {
 //   border-radius: 0.5vw;
 // }
 .information-container {
-
+  display: none;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 // .raincheck-information-title {
 //   margin-top: 0;

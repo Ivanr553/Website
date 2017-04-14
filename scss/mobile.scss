@@ -418,17 +418,20 @@ section {
 .raincheck {
   background-image: url("images/raincheck.png");
 }
+// .information-container {
+//   width: 100%;
+//   height: auto;
+//   display: none;
+//   position: absolute;
+//   padding: 1vw;
+//   z-index: 2;
+//   opacity: 0;
+//   user-select: none;
+//   cursor: default;
+//   border-radius: 0.5vw;
+// }
 .information-container {
-  width: 100%;
-  height: auto;
-  display: none;
-  position: absolute;
-  padding: 1vw;
-  z-index: 2;
-  opacity: 0;
-  user-select: none;
-  cursor: default;
-  border-radius: 0.5vw;
+
 }
 // .raincheck-information-title {
 //   margin-top: 0;

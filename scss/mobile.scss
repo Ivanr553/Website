@@ -34,7 +34,7 @@ h1 {
 }
 section {
   margin: 0;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 /*GENERIC CLASSES*/
@@ -433,11 +433,6 @@ section {
   user-select: none;
   cursor: default;
   border-radius: 0.5vw;
-}
-.raincheck-information {
-  color: rgba(255, 255, 255, 0.8);
-  opacity: 1;
-  user-select: none;
 }
 .raincheck-information-title {
   margin-top: 0;

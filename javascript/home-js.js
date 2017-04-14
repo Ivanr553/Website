@@ -1,3 +1,14 @@
+//DISABLE SCROLL
+$(function(){
+    $(window).bind('scroll', function(){
+         $(window).scrollTop(scrollPos);
+    });
+    $(window).bind('touchmove', function(){
+         $(window).trigger('scroll');
+    });
+});
+
+
 //OPEN WEBSITE FUNCTIONS
 
 function openCarla() {

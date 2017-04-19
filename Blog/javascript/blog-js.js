@@ -1,15 +1,15 @@
 //functions to link to blog posts
 function openBlog1() {
-  window.open("/blog/posts/blog-3-12-17", "_self");
+  window.open("/Blog/posts/blog-3-12-17", "_self");
 }
 function openBlog2() {
-  window.open("/blog/posts/blog-3-19-17", "_self");
+  window.open("/Blog/posts/blog-3-19-17", "_self");
 }
 function openBlog3() {
-  window.open("/blog/posts/blog-3-26-17", "_self");
+  window.open("/Blog/posts/blog-3-26-17", "_self");
 }
 function openBlog4() {
-  window.open("/blog/posts/blog-4-19-17", "_self");
+  window.open("/Blog/posts/blog-4-19-17", "_self");
 }
 
 //open Website

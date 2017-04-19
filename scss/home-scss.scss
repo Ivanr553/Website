@@ -252,8 +252,8 @@ section {
   transform: skewX(320deg);
 }
 .about-me-info {
-  width: 33vw;
-  min-width: 400px;
+  width: 25vw;
+  min-width: 300px;
   height: auto;
   max-height: 60vh;
   font-size:calc(7px + 1.5vmin);
@@ -265,6 +265,30 @@ section {
   left: 3vw;
   z-index: 2;
   opacity: 0;
+}
+.about-me-symbol-bar {
+  width: 40vw;
+  height: auto;
+  padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.about-me-symbol {
+  width: 5vw;
+  height: 5vw;
+  margin: auto;
+  background-size: cover;
+}
+.trombone {
+  background-image: url("images/trombone.png");
+}
+.fitness {
+  background-image: url("images/physical-sym.png");
+}
+.environment {
+  background-image: url("images/env-symbol.png");
 }
 
 .section-web {

@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <!--style sheet-->
+    <link rel="stylesheet" href="../css/blog-style.css">
+
+    <!-- meta tag and title -->
+    <meta charset="utf-8">
+    <title>Blog 3/16/17</title>
+  </head>
+  <body>
+
+        <div class="back-home" onclick="backToBlogHome()">
+          Blog Home
+        </div>
+
+    <div class="header">
+      <h1>The Free Coder Blog</h1>
+    </div>
+
+    <div class="post body">
+      <div class="left">
+        <
+      </div>
+      <span>
+        Blog Post 3/26/17: Spread Function<br><br>
+
+        Hello! So in my first two posts I have made lengthy articles discussing topics that I have been interested in and elaborated on them to great detail. While I still plan on posting these articles on fun things I have been learning, I will try to keep these a bit shorter for the sake of readability and fun (no one likes boring code articles.) I promise, no more 3 page blog posts.<br><br>
+
+        So! The topic of today: <b>...spread<b>! For those of you that have never heard of spread, what the heck is it? Well, its actually a rather straight forward function that adds a lot of convenience to your coding! Lets look at an example of spread in action to see how it works:\
+
+      <div class="tab">
+        let array = [1, 2, 3];<br><br>
+
+        function sum(a, b, c) {<br>
+        &emsp;  let answer = a + b + c;<br>
+        &emsp;  console.log("The answer is: " answer);<br>
+        }<br><br>
+
+        function(...array); //"The answer is: 6"<br><br>
+      </div>
+        Neat huh? When we use the spread function, we take all the elements of a given array and "spread" them through a line of code. In the case above, the array of [1, 2, 3] is being put in as the arguments of the function sum() with each item in the array being added sequentially. This saves a lot of time and effort trying to input these arguments into functions as now all you need to add is three periods!<br><br>
+
+        Not convinced yet? Let's look at one more example of spread in action to see how effective it can be. Lets say you have a constructor function. This function takes in arguments to pass into its properties to create new objects with the given properties. Using spread we can now just set the arguments into an array and spread them into the given function:<br><br>
+      <div class="tab">
+        function Monster(attack, defense, health) {<br>
+        &emsp;  this.attack = attack;<br>
+        &emsp;  this.defense = defense;<br>
+        &emsp;  this.health = health;<br>
+        }<br><br>
+
+        let orcStats = [10, 7, 20];<br><br>
+
+        let orc = new Monster(...orcStats);<br>
+        orc =<br>
+        &emsp;  Object {<br>
+        &emsp;&emsp;    attack: 10,<br>
+        &emsp;&emsp;    defense: 7,<br>
+        &emsp;&emsp;    health: 20<br>
+        &emsp;  }
+      </div>
+
+        In this situation you can see how conveniently you can add in arguments to these constructor functions and given how prevelant situations like this occur in object oriented programming (OOP) this is a very handy tool to have in your awesome coder's toolbelt.<br><br>
+
+        Okay so there is my short and sweet look at the spread function! I would like to reiterate that these posts are here to help me learn these concepts and to help other beginers to conceptualize these ideas. I know that it has been hard for me to learn some of these concepts, especially when other more proficient programmers have attempted to explain it. It is my goal to help those that are having a hard time learning code and to bring things down to a level that everyone can understand. Alright everyone, thanks again for reading!<br><br>
+
+        Ivan Raffucci
+      </span>
+      <div class="right">
+        >
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="../javascript/posts-js.js"></script>
+</html>

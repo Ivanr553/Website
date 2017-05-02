@@ -29,10 +29,6 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
-img {
-  border: solid 1px black;
-  box-shadow: 8px 8px 25px -5px rgba(0, 0, 0, 0.8); }
-
 a {
   cursor: pointer; }
 
@@ -222,6 +218,13 @@ a {
   padding: 0.8vw;
   cursor: default; }
 
+.hint {
+  -webkit-animation: fade-in 2s forwards;
+  animation: fade-in 2s forwards;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+  opacity: 0; }
+
 .section-websites {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -268,28 +271,17 @@ a {
   font-family: serif;
   font-style: italic;
   position: absolute;
-  top: 13%;
-  -webkit-animation: fade-right 2.5s forwards;
-  animation: fade-right 2.5s forwards;
-  opacity: 0; }
+  top: 13%; }
 
 .carla-home {
   position: absolute;
-  top: 20%;
-  -webkit-animation: fade-right 2.5s forwards;
-  animation: fade-right 2.5s forwards;
-  opacity: 0; }
+  top: 20%; }
 
 .carla-aboutme-responsive {
   position: absolute;
   top: 55%;
   left: 65%;
-  border-radius: 1vh;
-  -webkit-animation: fade-right 2.5s forwards;
-  animation: fade-right 2.5s forwards;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-  opacity: 0; }
+  border-radius: 1vh; }
 
 .carla-info {
   margin-top: 10%;
@@ -297,12 +289,7 @@ a {
   font-size: 2em;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2vw;
-  border-radius: 1vw;
-  -webkit-animation: fade-left 2.5s forwards;
-  animation: fade-left 2.5s forwards;
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  opacity: 0; }
+  border-radius: 1vw; }
 
 .section-applications {
   -webkit-flex-direction: row;
@@ -331,6 +318,103 @@ a {
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2vw;
   border-radius: 1vw; }
+
+.section-test {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0;
+  margin: 0; }
+
+.control-panel {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+  height: 94.1vh;
+  margin-top: 5.9vh;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #142033;
+  padding: 0;
+  border: solid 1px black; }
+
+.control-nav-bar {
+  width: 100%;
+  height: 10%;
+  background-color: #060b11;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.control-nav-bar-button {
+  width: 50%;
+  height: 100%;
+  color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-family: "machine";
+  cursor: pointer;
+  border-bottom: solid 1px grey; }
+
+.control-nav-bar-button-applications {
+  border-left: solid 1px grey; }
+
+.control-panel-content {
+  width: 90%;
+  margin-top: 3%;
+  font-size: 1em;
+  color: #dee9f7; }
+
+.section-test-content {
+  position: relative;
+  width: 60vw;
+  height: 94.1vh;
+  margin-top: 5.9vh;
+  border: solid 1px black;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.carla-home-test {
+  width: 100%;
+  height: auto; }
+
+.carla-aboutme-responsive-test {
+  width: auto;
+  height: auto; }
 
 @-webkit-keyframes fade-right {
   0% {

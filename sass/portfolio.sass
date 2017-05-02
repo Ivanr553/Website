@@ -12,6 +12,16 @@
   user-select: none
   cursor: default
 
+//to hide scrollbar
+// html
+//     overflow: scroll
+//     overflow-x: hidden
+//
+// ::-webkit-scrollbar
+//     width: 0px;  /* remove scrollbar space */
+//     background: transparent;  /* optional: just make scrollbar invisible */
+
+
 body
   padding: 0
   margin: 0
@@ -21,8 +31,8 @@ body
   justify-content: center
 
 img
-  border: solid 1px black
-  box-shadow: 8px 8px 25px -5px rgba(0, 0, 0, 0.8)
+  // border: solid 1px black
+  // box-shadow: 8px 8px 25px -5px rgba(0, 0, 0, 0.8)
 
 a
   cursor: pointer
@@ -180,6 +190,11 @@ a
   padding: 0.8vw
   cursor: default
 
+.hint
+  animation: fade-in 2s forwards
+  animation-delay: 3s
+  opacity: 0
+
 //website section
 .section-websites
   flex-direction: row
@@ -212,23 +227,23 @@ a
   font-style: italic
   position: absolute
   top: 13%
-  animation: fade-right 2.5s forwards
-  opacity: 0
+  // animation: fade-right 2.5s forwards
+  // opacity: 0
 
 .carla-home
   position: absolute
   top: 20%
-  animation: fade-right 2.5s forwards
-  opacity: 0
+  // animation: fade-right 2.5s forwards
+  // opacity: 0
 
 .carla-aboutme-responsive
   position: absolute
   top: 55%
   left: 65%
   border-radius: 1vh
-  animation: fade-right 2.5s forwards
-  animation-delay: 1s
-  opacity: 0
+  // animation: fade-right 2.5s forwards
+  // animation-delay: 1s
+  // opacity: 0
 
 .carla-info
   margin-top: 10%
@@ -237,9 +252,9 @@ a
   background-color: rgba(0, 0, 0, 0.1)
   padding: 2vw
   border-radius: 1vw
-  animation: fade-left 2.5s forwards
-  animation-delay: 2s
-  opacity: 0
+  // animation: fade-left 2.5s forwards
+  // animation-delay: 2s
+  // opacity: 0
 
 //aplications
 .section-applications
@@ -268,6 +283,83 @@ a
   padding: 2vw
   border-radius: 1vw
 
+//section-test
+.section-test
+  flex-direction: row
+  padding: 0
+  margin: 0
+// .control-panel-wrapper
+//   position: absolute
+//   left: 0
+//   width: 40vw
+//   height: 94.1vh
+//   margin-top: 5.9vh
+
+.control-panel
+  position: relative
+  display: flex
+  width: 40vw
+  height: 94.1vh
+  margin-top: 5.9vh
+  flex-direction: column
+  align-items: center
+  background-color: rgb(20, 32, 51)
+  padding: 0
+  border: solid 1px black
+
+.control-nav-bar
+  width: 100%
+  height: 10%
+  background-color: rgb(6, 11, 17)
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+.control-nav-bar-button
+  width: 50%
+  height: 100%
+  color: white
+  display: flex
+  flex-direction: column
+  text-align: center
+  justify-content: center
+  font-size: 2.5em
+  font-family: "machine"
+  cursor: pointer
+  border-bottom: solid 1px grey
+
+.control-nav-bar-button-applications
+  border-left: solid 1px grey
+
+.control-panel-content
+  width: 90%
+  margin-top: 3%
+  font-size: 1em
+  color: rgb(222, 233, 247)
+
+.section-test-content
+  position: relative
+  width: 60vw
+  height: 94.1vh
+  margin-top: 5.9vh
+  border: solid 1px black
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  // background-color: grey
+
+//carla test
+.carla-home-test
+  width: 100%
+  height: auto
+
+.carla-aboutme-responsive-test
+  width: auto
+  height: auto
+
+//animation keyframes
 @keyframes fade-right
   0%
     opacity: 0

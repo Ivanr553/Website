@@ -1,18 +1,18 @@
 //links
 function openLanding() {
-  window.open("./index.html", "_self");
+  window.open("./index", "_self");
 }
 
 function openAboutme() {
-  window.open("./aboutme.html", "_self");
+  window.open("./aboutme", "_self");
 }
 
 function openBlog() {
-  window.open("./Blog/blog-home.html", "_self");
+  window.open("./Blog/blog-home", "_self");
 }
 
 function openContact() {
-  window.open("./contact.html", "_self");
+  window.open("./contact", "_self");
 }
 
 function openGitHub() {

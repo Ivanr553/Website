@@ -1,15 +1,15 @@
 function openAboutMe() {
-  window.open("./aboutme.html", "_self");
+  window.open("./aboutme", "_self");
 }
 
 function openPortfolio() {
-  window.open("./portfolio.html", "_self");
+  window.open("./portfolio", "_self");
 }
 
 function openBlog() {
-  window.open("./Blog/blog-home.html", "_self");
+  window.open("./Blog/blog-home", "_self");
 }
 
 function openContact() {
-  window.open("./contact.html", "_self");
+  window.open("./contact", "_self");
 }

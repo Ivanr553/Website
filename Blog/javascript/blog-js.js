@@ -13,8 +13,8 @@ function openBlog4() {
 }
 
 //open Website
-function openWebsite() {
-  window.open("http://www.ivanraffucci.tech", "_self");
+function openIndex() {
+  window.open("../index.html", "_self");
 }
 
 //functionality for nav bar

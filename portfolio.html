@@ -1,0 +1,101 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  favicon tags -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  <!-- css -->
+  <link rel="stylesheet" href="css/portfolio.css">
+  <!-- title -->
+    <title>Ivan Raffucci</title>
+  <!-- scripts -->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="javascript/jquery-plugins/panelsnap/jquery.panelSnap.js"></script>
+</head>
+  <body>
+
+    <div class="nav-bar">
+      <div class="symbol landing-sym" onclick="openLanding()">Landing</div>
+      <div class="symbol about-sym" onclick="openAboutme()">About Me</div>
+      <div class="symbol portfolio-sym">Portfolio</div>
+      <div class="symbol blog-sym" onclick="openBlog()">Blog</div>
+      <div class="symbol contact-sym" onclick="openContact()">Contact Me</div>
+    </div>
+
+    <div class="section section-landing">
+      <div class="git" onclick="openGitHub()"></div>
+      <div class="codepen" onclick="openCodePen()"></div>
+      <div class="portfolio-title machine">Portfolio</div>
+      <!-- <br><div class="">(you should scroll down, I've got some cool stuff)</div> -->
+    </div>
+
+    <div class="section section-websites">
+      <div class="section-title machine">Websites</div>
+=
+      <div class="half-section">
+        <p class="carla-info" >
+        This is a website that I have created for one of my first clients. I worked with Carla to create the design, layout, and content of the website to bring her business on to the web. This site highlights my goal to create simple and elegant websites that get out of the way of the content. The website consists of three pages: the home page showing her most impressive work, an about me page where visitors can learn about her and contact her, and a gallery page with albums of some of the work she would like to showcase.
+
+        <br><br>Link to view site: <a href="http://carlakunkelweb.github.io/website/" target="blank">
+          carlakunkelweb.github.io/website
+        </a>
+        </p>
+      </div>
+
+      <div class="half-section website-carla">
+        <div class="carla-title">
+          Carla Kunkel: Interior Designer
+        </div>
+        <img class="carla-home" src="images/carla-home.jpg" width="800"></img>
+        <img class="carla-aboutme-responsive" src="images/carla-aboutme-responsive.jpg" width="200">
+      </div>
+
+    </div>
+
+    <div class="section section-applications">
+      <div class="section-title machine">Applications</div>
+
+      <div class="half-section">
+        Raincheck Application v2
+        <img class="raincheckv2-content" src="images/raincheckv2-content.jpg" width="600">
+        <img class="raincheckv2-register" src="images/raincheckv2-register.jpg" width="400">
+        <img class="raincheckv2-submit" src="images/raincheckv2-submit.jpg" width="500">
+      </div>
+
+      <div class="half-section">
+        <p class="raincheckv2-info">
+          This is the second version of a web-application that I have made. The goal of this app was to create a tool that would allow the user to organize customer orders that were received and easily add and remove them. Each user has their own account and the application encrypts and authenticates the user upon login and registration. Each user also only has access to customer orders under their account. The back-end of this application is in Node.js and the front end was done using Angular 2.
+
+          <br><br>Check it out! -
+          <a href="https://tranquil-chamber-53541.herokuapp.com/" target="blank">
+            Raincheckv2
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </body>
+  <script src="javascript/portfolio.js"></script>
+</html>

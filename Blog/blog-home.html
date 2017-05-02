@@ -1,7 +1,7 @@
 <html>
   <head>
     <!--style sheet-->
-    <link rel="stylesheet" href="./css/blog-style.css">
+    <link rel="stylesheet" href="./css/blog.css">
 
     <!--  favicon tags -->
       <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png">
@@ -22,16 +22,22 @@
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
       <meta name="theme-color" content="#ffffff">
 
-    <!-- meta tag and title --> 
+    <!-- meta tag and title -->
     <meta charset="utf-8">
     <title>Free Coder Blog</title>
   </head>
   <body>
+
+    <div class="back-home-landing" onclick="openIndex()">
+      <span class="lightgrey machine pointer">Ivan Raffucci</span>
+      <span class="blue serif pointer">Web Development</span>
+    </div>
+
     <div class="header">
       <h1>The Free Coder Blog</h1>
     </div>
 
-    <div class="blog-content">
+<div class="main-content">
       <div class="blog-nav-bar">
         <div class="blog-nav-bar-button" onclick="blogNavBarSelect(this, 'welcome')">Welcome<div class="arrow-down"></div></div>
         <div class="blog-nav-bar-button" onclick="blogNavBarSelect(this, 'posts')">Posts<div class="arrow-down"></div></div>
@@ -73,14 +79,13 @@
         </div>
       </div>
     </div>
-    </div>
-
-    <div class="footer">
+</div>
+    <!-- <div class="footer">
       <div class="logo-div" onclick="openWebsite()">
         <span class="lightgrey machine pointer">Ivan Raffucci</span>
         <span class="blue serif pointer">Web Development</span>
       </div>
-    </div>
+    </div> -->
   </body>
   <script type="text/javascript" src="javascript/blog-js.js"></script>
 </html>

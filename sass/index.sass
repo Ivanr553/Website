@@ -1,0 +1,190 @@
+//truetype fonts
+@font-face
+  font-family: "machine"
+  src: url("fonts/MachineScript.ttf") format("truetype")
+
+@font-face
+  font-family: "top"
+  src: url("fonts/TopModern.ttf") format("truetype")
+
+//html tags
+*
+  user-select: none
+
+body
+  padding: 0
+  margin: 0
+
+//usefull classes
+.black
+  color: rgb(10, 10, 10)
+
+.green
+  color: green
+
+.red
+  color: red
+
+.grey
+  color: grey
+
+.center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: baseline
+
+.machine
+  font-family: "machine"
+
+.top
+  font-family: "top"
+
+.serif
+  font-family: serif
+
+.default
+  cursor: default
+
+//nav-bar section
+.nav-bar
+  width: 100%
+  height: 6vh
+  min-width: 300px
+  position: fixed
+  z-index: 500
+  top: 0
+  margin: auto auto 0 auto
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  border-top-right-radius: 0.5vh
+  border-top-left-radius: 0.5vh
+  background-color: rgba(0, 0, 0, 0.5)
+
+.bar
+  width: 100%
+  height: 10%
+  background-color: rgba(0, 0, 0, 0.9)
+  position: absolute
+  top: 45%
+  z-index: 550
+
+.symbol
+  width: auto
+  height: auto
+  margin: auto 3vw auto 3vw
+  z-index: 600
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 1.4em
+  font-family: "top"
+  padding-bottom: 0.3vh
+  padding-top: 0.3vh
+  border-bottom: solid 1px rgba(255, 255, 255, 0)
+  border-top: solid 1px rgba(255, 255, 255, 0)
+
+.landing-sym
+  color: rgb(20, 59, 122)
+  cursor: default
+
+.about-sym
+  color: lightblue
+
+.portfolio-sym
+  color: white
+
+.apps-sym
+  color: orange
+
+.blog-sym
+  color: rgb(59, 173, 31)
+
+.contact-sym
+  color: grey
+
+.sym-hover
+  animation: show-border 500ms forwards
+
+.sym-hover-off
+  animation: hide-border 500ms forwards
+
+//landing page
+.landing
+  height: 100vh
+  width: 100%
+  background-color: rgb(15, 15, 15)
+  position: relative
+  background-size: cover
+  background-position: right bottom
+
+#name
+  font-size: 5em
+  position: absolute
+  right: 25vw
+  top: 40vh
+  color: rgba(250, 250, 250, 0.8)
+  cursor: default
+  opacity: 0
+  animation: fade-right 3s forwards
+  animation-delay: 500ms
+
+#web-dev-landing
+  font-size: 0.4em
+  margin-left: 1.3vw
+  margin-top: -0.8vh
+  color: rgba(56, 121, 226, 0.4)
+
+#landing-list
+  font-size: 2em
+  position: absolute
+  left: 28vw
+  top: 60vh
+  padding: 1vh
+  line-height: 140%
+  cursor: default
+  color: rgba(200, 200, 200, 0.8)
+
+.list-item
+  animation: fade-up 2s forwards
+  opacity: 0
+
+#list-freelancer
+  animation-delay: 2s
+
+#list-web
+  animation-delay: 3s
+
+#list-extra
+  animation-delay: 4s
+
+//animations
+@keyframes show-border
+  100%
+    border-color: rgba(255, 255, 255, 0.6)
+
+@keyframes hide-border
+  0%
+    border-color: rgba(255, 255, 255, 0.6)
+  100%
+    border-color: rgba(255, 255, 255, 0)
+
+@keyframes fade-up
+  0%
+    opacity: 0
+    transform: translatey(5vh)
+  100%
+    opacity: 1
+    transform: translatey(0vh)
+
+@keyframes fade-right
+  0%
+    opacity: 0
+    transform: translatex(5vh)
+  100%
+    opacity: 1
+    transform: translatex(0vh)

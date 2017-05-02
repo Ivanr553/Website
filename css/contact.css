@@ -30,6 +30,9 @@ body {
   -ms-flex-pack: center;
   justify-content: center; }
 
+a {
+  color: grey; }
+
 .black {
   color: #0a0a0a; }
 

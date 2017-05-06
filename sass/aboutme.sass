@@ -132,7 +132,7 @@ body
 
 .about-me-title
   position: absolute
-  top: 5vh
+  top: 8vh
   font-size: 4em
   flex-direction: column
   display: flex
@@ -140,6 +140,13 @@ body
   justify-content: center
   color: black
 
+.half-section
+  width: 50vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
 
 //content landing
 .section
@@ -185,7 +192,7 @@ body
   animation: fade-left 2.5s forwards
   color: rgb(235, 235, 235)
 
-.landing-intro-2
+.landing-intro
   opacity: 0
   animation: fade-left 2.5s forwards
   animation-delay: 1.5s
@@ -205,88 +212,109 @@ body
   padding: 0
   border-radius: 100vh
 
-//content-body 1
+//section-skills
 .section-skills
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: center
-  background-color: rgb(205, 205, 205)
-
-.skill-content
-  display: flex
-  flex-direction: row
-  justify-content: center
-  align-items: flex-start
-
-.skill-container
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: flex-start
-  padding: 1%
-  width: 50vw
-  height: 78%
-  margin-top: 0%
-
-.skill-wrapper
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: center
-  margin-top: 3%
-
-.skill
   position: relative
-  width: 17vw
-  font-size: 2em
-  text-align: right
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  // background-color: rgb(205, 205, 205)
 
-.skill-bar
-  margin-left: 1vw
-  height: 4%
+.skill-bubble-container
+  position: absolute
+  top: 0
+  width: 100%
+  height: 40%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+//skill-bubbles
+.skill-bubble
+  border-radius: 100%
+  background-color: blue
+  margin: 5vh
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  text-align: center
   font-size: 1.8em
-  text-align: right
-  color: black
-  padding-right: 0.3vw
+  border: solid 0.2vh black
+  background-size: cover
+  background-position: center
 
-.html
+.skill-html
   background-color: rgb(91, 128, 216)
-  width: 30vw
+  background-image: url("../images/html.jpg")
+  width: 20vh
+  height: 20vh
+  margin-top: 20vh
 
-.sass
+.skill-sass
   background-color: rgb(242, 138, 209)
-  width: 30vw
+  background-image: url("../images/sass.png")
+  width: 20vh
+  height: 20vh
+  margin-top: 20vh
 
-.javascript
+.skill-javascript
   background-color: rgb(165, 79, 209)
-  width: 33vw
+  background-image: url("../images/js.png")
+  background-position: bottom right
+  width: 25vh
+  height: 25vh
 
-.angular
-  background-color: rgb(229, 84, 84)
-  width: 27vw
+.skill-angular
+  background-color: rgb(230, 230, 230)
+  background-image: url("../images/angular2.png")
+  width: 12vh
+  height: 12vh
+  margin-top: 40vh
 
-.node
-  background-color: rgb(41, 142, 39)
-  width: 27vw
+.skill-node
+  background-color: black
+  background-image: url("../images/node.png")
+  width: 12vh
+  height: 12vh
+  margin-top: 40vh
 
+//skill page information
 .skill-info
+  position: absolute
+  bottom: 5%
   display: flex
   flex-direction: column
   align-items: center
   justify-content: center
-  width: 46vw
-  height: 80%
-  margin-top: 0%
+
+.skill-content-title
+  position: absolute
+  top: -22%
+  font-size: 5em
+  text-decoration: underline
+  color: rgb(74, 123, 206)
+
+.skill-info-content-wrapper
+  // background-color: rgba(250, 250, 250, 0.5)
+  // background-color: rgb(91, 119, 165)
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding-top: 4vh
+  padding-bottom: 5vh
+  // border-top: solid 0.5vh black
+  // border-bottom: solid 0.5vh black
 
 .skill-info-content
   width: 60%
-  font-size: 1.8em
-  background-color: rgba(50, 50, 50, 0.2)
-  color: black
-  padding: 2vw
-  margin-top: 4vw
-  border-radius: 1vw
+  font-size: 2em
+  color: rgb(220, 220, 220)
+  font-style: bold
 
 //content-body 2
 .section-about-me

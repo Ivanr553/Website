@@ -27,10 +27,19 @@ body {
   align-items: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  overflow-y: hidden; }
+
+img {
+  border: solid 1px black;
+  box-shadow: 8px 8px 25px -5px rgba(0, 0, 0, 0.8); }
 
 a {
   cursor: pointer; }
+
+h1 {
+  font-size: 1.5em;
+  color: #910a26; }
 
 .black {
   color: #0a0a0a; }
@@ -96,8 +105,6 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border-top-right-radius: 0.5vh;
-  border-top-left-radius: 0.5vh;
   background-color: rgba(0, 0, 0, 0.5); }
 
 .bar {
@@ -180,8 +187,8 @@ a {
   width: 5vw;
   height: 5vw;
   position: absolute;
-  left: 5vw;
-  top: 10vh;
+  left: 2vw;
+  bottom: 2vh;
   background-image: url("../images/git-edit.png");
   background-size: cover;
   background-position: center;
@@ -198,8 +205,8 @@ a {
   width: 5vw;
   height: 5vw;
   position: absolute;
-  right: 5vw;
-  top: 10vh;
+  right: 2vw;
+  bottom: 2vh;
   background-image: url("../images/codepen.png");
   background-size: cover;
   background-position: center;
@@ -271,22 +278,12 @@ a {
   font-family: serif;
   font-style: italic;
   position: absolute;
-  top: 13%; }
-
-.carla-home {
-  position: absolute;
-  top: 20%; }
-
-.carla-aboutme-responsive {
-  position: absolute;
-  top: 55%;
-  left: 65%;
-  border-radius: 1vh; }
+  top: 2%; }
 
 .carla-info {
-  margin-top: 10%;
+  margin-top: 20%;
   width: 80%;
-  font-size: 2em;
+  font-size: 1.7em;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 2vw;
   border-radius: 1vw; }
@@ -295,21 +292,6 @@ a {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
-
-.raincheckv2-content {
-  position: absolute;
-  left: 20%;
-  top: 20%; }
-
-.raincheckv2-submit {
-  position: absolute;
-  left: 43%;
-  top: 44%; }
-
-.raincheckv2-register {
-  position: absolute;
-  left: 10%;
-  top: 39%; }
 
 .raincheckv2-info {
   width: 80%;
@@ -331,23 +313,25 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 40vw;
+  width: 30vw;
   height: 94.1vh;
-  margin-top: 5.9vh;
+  margin-top: 6.1vh;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #142033;
+  background-color: #18181c;
   padding: 0;
-  border: solid 1px black; }
+  opacity: 0.9;
+  overflow-x: hidden; }
 
-.control-nav-bar {
+.control-panel-nav-bar {
+  position: relative;
   width: 100%;
   height: 10%;
-  background-color: #060b11;
+  background-color: #0d1014;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -361,10 +345,9 @@ a {
   -ms-flex-pack: center;
   justify-content: center; }
 
-.control-nav-bar-button {
+.control-panel-nav-bar-button {
   width: 50%;
   height: 100%;
-  color: white;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -375,26 +358,87 @@ a {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-family: "machine";
   cursor: pointer;
-  border-bottom: solid 1px grey; }
+  color: grey; }
 
-.control-nav-bar-button-applications {
-  border-left: solid 1px grey; }
+.control-panel-nav-bar-button-websites {
+  color: white;
+  cursor: default; }
+
+.control-panel-nav-bar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12%; }
+
+.slider-background-website {
+  float: left;
+  height: 100%;
+  width: 50%;
+  background-color: #6bc3ff; }
+
+.slider-background-applications {
+  float: right;
+  height: 100%;
+  width: 50%;
+  background-color: #b7001f; }
+
+.control-panel-nav-bar-slider {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150%;
+  height: 100%; }
+
+.slider-left-cover {
+  float: right;
+  width: 33.3%;
+  height: 100%;
+  background-color: #0d1014; }
+
+.slider-right-cover {
+  float: left;
+  width: 33.3%;
+  height: 100%;
+  background-color: #0d1014; }
+
+.control-panel-directional-button {
+  position: absolute;
+  width: 4vw;
+  height: 6vh;
+  background-color: #1b2e4f;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: black;
+  font-style: bold;
+  font-size: 2.8em;
+  cursor: default; }
+
+.control-panel-control-left {
+  left: 0;
+  top: 0; }
+
+.control-panel-control-right {
+  right: 0;
+  top: 0; }
 
 .control-panel-content {
-  width: 90%;
-  margin-top: 3%;
-  font-size: 1em;
-  color: #dee9f7; }
-
-.section-test-content {
   position: relative;
-  width: 60vw;
-  height: 94.1vh;
-  margin-top: 5.9vh;
-  border: solid 1px black;
+  width: 100%;
+  margin-top: 4%;
+  font-size: 1em;
+  color: #dee9f7;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -408,13 +452,90 @@ a {
   -ms-flex-pack: start;
   justify-content: flex-start; }
 
-.carla-home-test {
-  width: 100%;
-  height: auto; }
+.control-panel-info {
+  margin-top: 13%;
+  width: 90%;
+  font-size: 1.1em; }
 
-.carla-aboutme-responsive-test {
-  width: auto;
-  height: auto; }
+.control-panel-division-bar {
+  width: 100%;
+  height: 0.1vh;
+  background-color: grey; }
+
+.section-test-content {
+  position: relative;
+  width: 70vw;
+  height: 94vh;
+  margin-top: 6vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  background-color: rgba(0, 188, 185, 0.05); }
+
+.websites {
+  display: block; }
+
+.h1-websites {
+  color: #2e86c1; }
+
+.carla-display {
+  display: none; }
+
+.control-panel-carla-title {
+  font-size: 1.7em;
+  font-family: serif;
+  font-style: italic;
+  position: absolute;
+  top: 4%; }
+
+.applications {
+  display: none; }
+
+.control-panel-raincheckv2-title {
+  font-size: 2em;
+  font-family: serif;
+  font-style: italic;
+  position: absolute;
+  top: 3%; }
+
+.img-carla-home {
+  width: 40vw;
+  position: absolute;
+  top: 20%; }
+
+.img-carla-aboutme-responsive {
+  position: absolute;
+  width: 12vw;
+  top: 45vh;
+  right: 28vh;
+  border-radius: 1vh; }
+
+.img-raincheckv2-content {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 35vw; }
+
+.img-raincheckv2-register {
+  position: absolute;
+  left: 10%;
+  top: 38%;
+  width: 28vw; }
+
+.img-raincheckv2-submit {
+  position: absolute;
+  left: 43%;
+  top: 43%;
+  width: 28vw; }
 
 @-webkit-keyframes fade-right {
   0% {
@@ -467,3 +588,47 @@ a {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@-webkit-keyframes nav-slider-left {
+  0% {
+    left: 0; }
+  100% {
+    left: -50%; } }
+
+@keyframes nav-slider-left {
+  0% {
+    left: 0; }
+  100% {
+    left: -50%; } }
+
+@-webkit-keyframes nav-slider-right {
+  0% {
+    left: -50%; }
+  100% {
+    left: 0; } }
+
+@keyframes nav-slider-right {
+  0% {
+    left: -50%; }
+  100% {
+    left: 0; } }
+
+@-webkit-keyframes git-hover {
+  100% {
+    opacity: 1; } }
+
+@keyframes git-hover {
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes git-hover-off {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.7; } }
+
+@keyframes git-hover-off {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.7; } }

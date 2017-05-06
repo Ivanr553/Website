@@ -163,7 +163,7 @@ body {
 
 .about-me-title {
   position: absolute;
-  top: 5vh;
+  top: 8vh;
   font-size: 4em;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -178,6 +178,22 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   color: black; }
+
+.half-section {
+  width: 50vw;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .section {
   width: 100vw;
@@ -239,7 +255,7 @@ body {
   animation: fade-left 2.5s forwards;
   color: #ebebeb; }
 
-.landing-intro-2 {
+.landing-intro {
   opacity: 0;
   -webkit-animation: fade-left 2.5s forwards;
   animation: fade-left 2.5s forwards;
@@ -261,102 +277,120 @@ body {
   border-radius: 100vh; }
 
 .section-skills {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #cdcdcd; }
-
-.skill-content {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start; }
-
-.skill-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  padding: 1%;
-  width: 50vw;
-  height: 78%;
-  margin-top: 0%; }
-
-.skill-wrapper {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: 3%; }
-
-.skill {
   position: relative;
-  width: 17vw;
-  font-size: 2em;
-  text-align: right; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
-.skill-bar {
-  margin-left: 1vw;
-  height: 4%;
+.skill-bubble-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.skill-bubble {
+  border-radius: 100%;
+  background-color: blue;
+  margin: 5vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
   font-size: 1.8em;
-  text-align: right;
-  color: black;
-  padding-right: 0.3vw; }
+  border: solid 0.2vh black;
+  background-size: cover;
+  background-position: center; }
 
-.html {
+.skill-html {
   background-color: #5b80d8;
-  width: 30vw; }
+  background-image: url("../images/html.jpg");
+  width: 20vh;
+  height: 20vh;
+  margin-top: 20vh; }
 
-.sass {
+.skill-sass {
   background-color: #f28ad1;
-  width: 30vw; }
+  background-image: url("../images/sass.png");
+  width: 20vh;
+  height: 20vh;
+  margin-top: 20vh; }
 
-.javascript {
+.skill-javascript {
   background-color: #a54fd1;
-  width: 33vw; }
+  background-image: url("../images/js.png");
+  background-position: bottom right;
+  width: 25vh;
+  height: 25vh; }
 
-.angular {
-  background-color: #e55454;
-  width: 27vw; }
+.skill-angular {
+  background-color: #e6e6e6;
+  background-image: url("../images/angular2.png");
+  width: 12vh;
+  height: 12vh;
+  margin-top: 40vh; }
 
-.node {
-  background-color: #298e27;
-  width: 27vw; }
+.skill-node {
+  background-color: black;
+  background-image: url("../images/node.png");
+  width: 12vh;
+  height: 12vh;
+  margin-top: 40vh; }
 
 .skill-info {
+  position: absolute;
+  bottom: 5%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.skill-content-title {
+  position: absolute;
+  top: -22%;
+  font-size: 5em;
+  text-decoration: underline;
+  color: #4a7bce; }
+
+.skill-info-content-wrapper {
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -369,18 +403,14 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 46vw;
-  height: 80%;
-  margin-top: 0%; }
+  padding-top: 4vh;
+  padding-bottom: 5vh; }
 
 .skill-info-content {
   width: 60%;
-  font-size: 1.8em;
-  background-color: rgba(50, 50, 50, 0.2);
-  color: black;
-  padding: 2vw;
-  margin-top: 4vw;
-  border-radius: 1vw; }
+  font-size: 2em;
+  color: gainsboro;
+  font-style: bold; }
 
 .section-about-me {
   display: -webkit-flex;

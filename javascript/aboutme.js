@@ -77,3 +77,9 @@ $(".environment").mousedown(function() {
     "animation" : "none"
   })
 })
+
+//make skills draggable
+
+$( () => {
+  $(".skill-bubble").draggable({revert: true, containment: ".section-skills-2"});
+})

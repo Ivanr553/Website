@@ -83,3 +83,26 @@ $(".environment").mousedown(function() {
 $( () => {
   $(".skill-bubble").draggable({revert: true, containment: ".section-skills-2"});
 })
+
+//animate scroll
+$(window).scroll( () => {
+  $(".half-section-landing-left").css({
+    "transform" : "translatey("+ ($(this).scrollTop()*2) +"px)"
+  })
+  $(".half-section-landing-right").css({
+    "transform" : "translatey("+ $(window).scrollTop()*20 +")"
+  })
+  if($(this).scrollTop() > 1200) {
+    $(".section-skills").css({
+      "display" : "flex",
+      "animation" : "fade-in 2s forwards"
+    })
+    $(".half-section-landing").css({
+      "display" : "none"
+    })
+    $(".section-2").css({
+      "display" : "none"
+    })
+    $(window).scrollTop(0)
+  }
+})

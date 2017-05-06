@@ -20,6 +20,11 @@ body
   flex-direction: column
   align-items: center
   justify-content: center
+  background-color: rgb(35, 35, 35)
+
+::-webkit-scrollbar
+    display: none
+
 
 //usefull classes
 .black
@@ -154,14 +159,26 @@ body
   max-width: 100%
   height: 100vh
   position: relative
-  background-color: rgb(35, 35, 35)
 
 .landing
   display: flex
-  flex-direction: column
+  flex-direction: row
   justify-content: center
   align-items: center
   font-size: 1em
+  // overflow-y: scroll
+
+.half-section-landing
+  position: relative
+  height: 94vh
+  margin-top: 6vh
+  width: 60%
+
+.half-section-landing-left
+  background-color: white
+
+.half-section-landing-right
+  width: 40%
 
 .about-me-title-landing
   position: absolute
@@ -179,6 +196,8 @@ body
   top: 25%
   font-size: 5em
   text-align: center
+  color: rgb(235, 235, 235)
+  color: black
 
 .about-me-info-landing
   position: absolute
@@ -186,16 +205,27 @@ body
   top: 40%
   width: 40vw
   color: rgb(235, 235, 235)
+  color: black
   font-size: 1.6em
 
 .landing-intro-1
   animation: fade-left 2.5s forwards
-  color: rgb(235, 235, 235)
 
-.landing-intro
-  opacity: 0
+.landing-intro-2
   animation: fade-left 2.5s forwards
   animation-delay: 1.5s
+  opacity: 0
+
+.landing-scroll-notification
+  position: absolute
+  bottom: 20%
+  left: 30%
+  color: rgb(235, 235, 235)
+  font-size: 1.5em
+  animation: fade-in 2.5s forwards
+  animation-delay: 3.5s
+  opacity: 0
+  color: black
 
 .portrait
   position: absolute
@@ -212,14 +242,17 @@ body
   padding: 0
   border-radius: 100vh
 
+.section-2
+  z-index: -1
+
 //section-skills
 .section-skills
   position: relative
-  display: flex
+  display: none
   flex-direction: row
   align-items: center
   justify-content: center
-  // background-color: rgb(205, 205, 205)
+  opacity: 0
 
 .skill-bubble-container
   position: absolute
@@ -298,8 +331,6 @@ body
   color: rgb(74, 123, 206)
 
 .skill-info-content-wrapper
-  // background-color: rgba(250, 250, 250, 0.5)
-  // background-color: rgb(91, 119, 165)
   width: 100%
   display: flex
   flex-direction: column
@@ -307,8 +338,6 @@ body
   justify-content: center
   padding-top: 4vh
   padding-bottom: 5vh
-  // border-top: solid 0.5vh black
-  // border-bottom: solid 0.5vh black
 
 .skill-info-content
   width: 60%

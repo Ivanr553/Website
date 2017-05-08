@@ -84,25 +84,96 @@ $( () => {
   $(".skill-bubble").draggable({revert: true, containment: ".section-skills-2"});
 })
 
-//animate scroll
+//animate scroll for about me pages
 $(window).scroll( () => {
+  console.log(($(window).scrollTop()/($(window).height()/2)))
   $(".half-section-landing-left").css({
-    "transform" : "translatey("+ ($(this).scrollTop()*2) +"px)"
+    "transform" : "translatey("+ ($(window).scrollTop()*2) +"px)"
   })
   $(".half-section-landing-right").css({
-    "transform" : "translatey("+ $(window).scrollTop()*20 +")"
+    "transform" : "translatey("+ -($(window).scrollTop()/200) +"px)"
   })
-  if($(this).scrollTop() > 1200) {
-    $(".section-skills").css({
-      "display" : "flex",
-      "animation" : "fade-in 2s forwards"
+  //set skill section to respond to scrollbar with opacity and scale when scrolling up
+  if(($(window).scrollTop()/($(window).height()/3)) <= 1) {
+    $(".skill-bubble-container").css({
+      "opacity" : ($(window).scrollTop()/($(window).height()/3))
     })
+    $(".skill-info").css({
+      "opacity" : ($(window).scrollTop()/($(window).height()/3))
+    })
+    $(".section-skills").css({
+      "transform" : "scale("+ (0.9 + (($(window).scrollTop()/($(window).height()/3))/10)) +")"
+    })
+  }
+  //reset translate if not scrolling down
+  if(($(window).scrollTop()/($(window).height()/3)) <= 1.4){
+    $(".skill-bubble-container").css({
+      "transform" : "translatex(0px)"
+    })
+    $(".skill-info").css({
+      "transform" : "translatex(0px)"
+    })
+  }
+  //set skill section to respond with x translation when scrolling down
+  if(($(window).scrollTop()/($(window).height()/3)) > 1.4 && $(".section-skills").css("display") == "flex") {
+      $(".skill-bubble-container").css({
+        "transform" : "translatex("+ ((($(window).scrollTop()/($(window).height()/3))-1.4)*$(window).width()*0.7) +"px)",
+        "opacity" : 1-((($(window).scrollTop()/($(window).height()/3))-1.4)*1.5)
+      })
+      $(".skill-info").css({
+        "transform" : "translatex("+ -((($(window).scrollTop()/($(window).height()/3))-1.4)*$(window).width()*0.7) +"px)",
+        "opacity" : 1-((($(window).scrollTop()/($(window).height()/3))-1.4)*1.5)
+      })
+  }
+  $(".half-section-landing-right").css({
+    "opacity" : 1-($(window).scrollTop()/($(window).height()/2))
+  })
+  $(".half-section-landing-left").css({
+    "opacity" : 1-($(window).scrollTop()/($(window).height()/2))
+  })
+  //begin showing skill section when 1200 scroll down page
+  if($(this).scrollTop() > 1200 && $(".half-section-landing").css("display") == "block") {
+    console.log("showing skill")
+    setTimeout(function(){
+      $(".section-skills").css({
+        "display" : "flex",
+        "animation" : "fade-in 2s forwards"
+      })
+      console.log("set animation")
+    }, 50)
+
     $(".half-section-landing").css({
       "display" : "none"
     })
     $(".section-2").css({
-      "display" : "none"
+      "display" : "flex"
     })
-    $(window).scrollTop(0)
+    $(".section-3").css({
+      "display" : "flex"
+    })
+    window.scrollTo(0, $(window).height()/2)
   }
+  //return to aboutme landing page when scrolling pup from section-skills
+  if($(".section-skills").css("display") == "flex" && $(window).scrollTop() == 0 && $(".section-skills").css("display") == "flex" && $(".half-section-landing").css("display") == "none") {
+      $(".section-skills").css({
+        "display" : "none"
+      })
+      $(".half-section-landing").css({
+        "opacity" : "0",
+        "display" : "block",
+        "animation" : "fade-in 800ms forwards"
+      })
+      $(".section-2").css({
+        "display" : "block"
+      })
+      $(".section-3").css({
+        "display" : "none"
+      })
+      window.scrollTo(0, 0)
+    }
+})
+
+//reset scrollTop
+$(document).ready( () => {
+  setTimeout(function(){window.scrollTo(0, 0)}, 50)
 })

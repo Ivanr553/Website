@@ -29,7 +29,8 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #232323; }
+  background-color: #232323;
+  overflow-y: scroll; }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -256,7 +257,6 @@ body {
   top: 25%;
   font-size: 5em;
   text-align: center;
-  color: #ebebeb;
   color: black; }
 
 .about-me-info-landing {
@@ -264,19 +264,21 @@ body {
   left: 14%;
   top: 40%;
   width: 40vw;
-  color: #ebebeb;
   color: black;
   font-size: 1.6em; }
 
 .landing-intro-1 {
   -webkit-animation: fade-left 2.5s forwards;
-  animation: fade-left 2.5s forwards; }
+  animation: fade-left 2.5s forwards;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  opacity: 0; }
 
 .landing-intro-2 {
   -webkit-animation: fade-left 2.5s forwards;
   animation: fade-left 2.5s forwards;
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
   opacity: 0; }
 
 .landing-scroll-notification {
@@ -287,30 +289,80 @@ body {
   font-size: 1.5em;
   -webkit-animation: fade-in 2.5s forwards;
   animation: fade-in 2.5s forwards;
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s;
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
   opacity: 0;
   color: black; }
 
-.portrait {
+.landing-section-bubble-icons {
   position: absolute;
-  right: 7vw;
-  bottom: 10vh;
+  background-size: cover;
+  position: center;
+  border-radius: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: fade-in-bubbles 2.5s forwards;
+  animation: fade-in-bubbles 2.5s forwards;
+  -webkit-animation-delay: 500ms;
+  animation-delay: 500ms;
+  opacity: 0; }
+
+.portrait {
+  right: 2vw;
+  bottom: 5vh;
   width: 50vh;
   height: 50vh;
   background-image: url("../images/portrait-edit.jpg");
-  background-size: cover;
-  background-position: right;
-  opacity: 0.8;
-  margin: 0;
-  padding: 0;
-  border-radius: 100vh; }
+  background-position: right; }
+
+.web-design {
+  right: 45vh;
+  top: 22vh;
+  width: 25vh;
+  height: 25vh;
+  background-image: url("../images/web-design.png");
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+.html-css {
+  right: 22vh;
+  top: 5vh;
+  width: 26vh;
+  height: 26vh;
+  background-image: url("../images/html-css.png");
+  -webkit-animation-delay: 2.6s;
+  animation-delay: 2.6s; }
+
+.gaming {
+  right: 3vh;
+  top: 20vh;
+  width: 18vh;
+  height: 18vh;
+  background-image: url("../images/gaming.png");
+  -webkit-animation-delay: 3.2s;
+  animation-delay: 3.2s; }
+
+.bass {
+  right: 8vh;
+  top: 4vh;
+  width: 13vh;
+  height: 13vh;
+  background-image: url("../images/bass.png");
+  -webkit-animation-delay: 3.8s;
+  animation-delay: 3.8s; }
 
 .section-2 {
-  z-index: -1; }
+  z-index: -1;
+  height: 200vh; }
+
+.section-3 {
+  z-index: -1;
+  display: none; }
 
 .section-skills {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: none;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
@@ -636,3 +688,15 @@ body {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@-webkit-keyframes fade-in-bubbles {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.9; } }
+
+@keyframes fade-in-bubbles {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.9; } }

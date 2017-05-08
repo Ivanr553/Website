@@ -21,6 +21,7 @@ body
   align-items: center
   justify-content: center
   background-color: rgb(35, 35, 35)
+  overflow-y: scroll
 
 ::-webkit-scrollbar
     display: none
@@ -166,7 +167,6 @@ body
   justify-content: center
   align-items: center
   font-size: 1em
-  // overflow-y: scroll
 
 .half-section-landing
   position: relative
@@ -196,7 +196,6 @@ body
   top: 25%
   font-size: 5em
   text-align: center
-  color: rgb(235, 235, 235)
   color: black
 
 .about-me-info-landing
@@ -204,16 +203,17 @@ body
   left: 14%
   top: 40%
   width: 40vw
-  color: rgb(235, 235, 235)
   color: black
   font-size: 1.6em
 
 .landing-intro-1
   animation: fade-left 2.5s forwards
+  animation-delay: 500ms
+  opacity: 0
 
 .landing-intro-2
   animation: fade-left 2.5s forwards
-  animation-delay: 1.5s
+  animation-delay: 1.8s
   opacity: 0
 
 .landing-scroll-notification
@@ -223,31 +223,74 @@ body
   color: rgb(235, 235, 235)
   font-size: 1.5em
   animation: fade-in 2.5s forwards
-  animation-delay: 3.5s
+  animation-delay: 7s
   opacity: 0
   color: black
 
-.portrait
+.landing-section-bubble-icons
   position: absolute
-  right: 7vw
-  bottom: 10vh
+  background-size: cover
+  position: center
+  border-radius: 100vh
+  margin: 0
+  padding: 0
+  animation: fade-in-bubbles 2.5s forwards
+  animation-delay: 500ms
+  opacity: 0
+
+.portrait
+  right: 2vw
+  bottom: 5vh
   width: 50vh
   height: 50vh
   background-image: url("../images/portrait-edit.jpg")
-  // background-image: url("../images/sanfran.jpg")
-  background-size: cover
   background-position: right
-  opacity: 0.8
-  margin: 0
-  padding: 0
-  border-radius: 100vh
+
+.web-design
+  right: 45vh
+  top: 22vh
+  width: 25vh
+  height: 25vh
+  background-image: url("../images/web-design.png")
+  animation-delay: 2s
+
+.html-css
+  right: 22vh
+  top: 5vh
+  width: 26vh
+  height: 26vh
+  background-image: url("../images/html-css.png")
+  animation-delay: 2.6s
+
+.gaming
+  right: 3vh
+  top: 20vh
+  width: 18vh
+  height: 18vh
+  background-image: url("../images/gaming.png")
+  animation-delay: 3.2s
+
+.bass
+  right: 8vh
+  top: 4vh
+  width: 13vh
+  height: 13vh
+  background-image: url("../images/bass.png")
+  animation-delay: 3.8s
 
 .section-2
   z-index: -1
+  height: 200vh
+
+.section-3
+  z-index: -1
+  display: none
 
 //section-skills
 .section-skills
-  position: relative
+  position: fixed
+  top: 0
+  left: 0
   display: none
   flex-direction: row
   align-items: center
@@ -457,3 +500,9 @@ body
     opacity: 0
   100%
     opacity: 1
+
+@keyframes fade-in-bubbles
+  0%
+    opacity: 0
+  100%
+    opacity: 0.9

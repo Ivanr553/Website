@@ -15,78 +15,76 @@ function openContact() {
 }
 
 //clear about-me mousdown
-$(document).mousedown(function(e) {
-  if(!$(".about-me-symbol").is(e.target)) {
-      $(".about-me-info").css({
-        "display" : "block",
-        "animation" : "fade-in 1500ms forwards"
-      })
-      $(".info").css({
-        "display" : "none",
-        "animation" : "none"
-      })
-  }
-})
+// $(document).mousedown(function(e) {
+//   if(!$(".about-me-symbol").is(e.target)) {
+//       $(".about-me-info").css({
+//         "display" : "block",
+//         "animation" : "fade-in 1500ms forwards"
+//       })
+//       $(".info").css({
+//         "display" : "none",
+//         "animation" : "none"
+//       })
+//   }
+// })
 
 //onclick animations for about-me symbols
-$(".trombone").mousedown(function() {
-  $(".info").css({
-    "display" : "none",
-    "animation" : "none"
-  })
-
-  $(".trombone-info").css({
-    "display" : "block",
-    "animation" : "fade-in 1500ms forwards"
-  })
-
-  $(".about-me-info").css({
-    "display" : "none",
-    "animation" : "none"
-  })
-})
-
-$(".fitness").mousedown(function() {
-  $(".info").css({
-    "display" : "none",
-    "animation" : "none"
-  })
-
-  $(".fitness-info").css({
-    "display" : "block",
-    "animation" : "fade-in 1500ms forwards"
-  })
-  $(".about-me-info").css({
-    "display" : "none",
-    "animation" : "none"
-  })
-})
-
-$(".environment").mousedown(function() {
-  $(".info").css({
-    "display" : "none",
-    "animation" : "none"
-  })
-
-  $(".environment-info").css({
-    "display" : "block",
-    "animation" : "fade-in 1500ms forwards"
-  })
-  $(".about-me-info").css({
-    "display" : "none",
-    "animation" : "none"
-  })
-})
+// $(".trombone").mousedown(function() {
+//   $(".info").css({
+//     "display" : "none",
+//     "animation" : "none"
+//   })
+//
+//   $(".trombone-info").css({
+//     "display" : "block",
+//     "animation" : "fade-in 1500ms forwards"
+//   })
+//
+//   $(".about-me-info").css({
+//     "display" : "none",
+//     "animation" : "none"
+//   })
+// })
+//
+// $(".fitness").mousedown(function() {
+//   $(".info").css({
+//     "display" : "none",
+//     "animation" : "none"
+//   })
+//
+//   $(".fitness-info").css({
+//     "display" : "block",
+//     "animation" : "fade-in 1500ms forwards"
+//   })
+//   $(".about-me-info").css({
+//     "display" : "none",
+//     "animation" : "none"
+//   })
+// })
+//
+// $(".environment").mousedown(function() {
+//   $(".info").css({
+//     "display" : "none",
+//     "animation" : "none"
+//   })
+//
+//   $(".environment-info").css({
+//     "display" : "block",
+//     "animation" : "fade-in 1500ms forwards"
+//   })
+//   $(".about-me-info").css({
+//     "display" : "none",
+//     "animation" : "none"
+//   })
+// })
 
 //make skills draggable
-
 $( () => {
   $(".skill-bubble").draggable({revert: true, containment: ".section-skills-2"});
 })
 
 //animate scroll for about me pages
 $(window).scroll( () => {
-  console.log(($(window).scrollTop()/($(window).height()/2)))
   $(".half-section-landing-left").css({
     "transform" : "translatey("+ ($(window).scrollTop()*2) +"px)"
   })
@@ -132,15 +130,19 @@ $(window).scroll( () => {
     "opacity" : 1-($(window).scrollTop()/($(window).height()/2))
   })
   //begin showing skill section when 1200 scroll down page
-  if($(this).scrollTop() > 1200 && $(".half-section-landing").css("display") == "block") {
-    console.log("showing skill")
+  if($(this).scrollTop() > $(window).height()/3 && $(".half-section-landing").css("display") == "block") {
+    $("body").css({"overflow-y" : "hidden"})
     setTimeout(function(){
       $(".section-skills").css({
         "display" : "flex",
         "animation" : "fade-in 2s forwards"
       })
-      console.log("set animation")
     }, 50)
+
+    setTimeout(function(){
+      $("body").css({"overflow-y" : "scroll"})
+      window.scrollTo(0, $(window).height()/3)
+    }, 500)
 
     $(".half-section-landing").css({
       "display" : "none"
@@ -155,6 +157,7 @@ $(window).scroll( () => {
   }
   //return to aboutme landing page when scrolling pup from section-skills
   if($(".section-skills").css("display") == "flex" && $(window).scrollTop() == 0 && $(".section-skills").css("display") == "flex" && $(".half-section-landing").css("display") == "none") {
+    $("body").css({"overflow-y" : "scroll"})
       $(".section-skills").css({
         "display" : "none"
       })

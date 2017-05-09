@@ -29,6 +29,9 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   overflow-y: hidden; }
+  @media screen and (max-width: 1370px) {
+    body {
+      font-size: 75%; } }
 
 img {
   border: solid 1px black;

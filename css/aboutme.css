@@ -31,6 +31,9 @@ body {
   justify-content: center;
   background-color: #232323;
   overflow-y: scroll; }
+  @media screen and (max-width: 1370px) {
+    body {
+      font-size: 75%; } }
 
 ::-webkit-scrollbar {
   display: none; }
@@ -314,6 +317,10 @@ body {
   height: 50vh;
   background-image: url("../images/portrait-edit.jpg");
   background-position: right; }
+  @media screen and (max-width: 1200px) {
+    .portrait {
+      width: 30vw;
+      height: 30vw; } }
 
 .web-design {
   right: 45vh;
@@ -323,6 +330,12 @@ body {
   background-image: url("../images/web-design.png");
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
+  @media screen and (max-width: 1200px) {
+    .web-design {
+      width: 21vh;
+      height: 21vh;
+      right: 36vh;
+      top: 28vh; } }
 
 .html-css {
   right: 22vh;
@@ -332,6 +345,12 @@ body {
   background-image: url("../images/html-css.png");
   -webkit-animation-delay: 2.6s;
   animation-delay: 2.6s; }
+  @media screen and (max-width: 1200px) {
+    .html-css {
+      width: 23vh;
+      height: 23vh;
+      top: 10vh;
+      right: 18vh; } }
 
 .gaming {
   right: 3vh;
@@ -341,6 +360,12 @@ body {
   background-image: url("../images/gaming.png");
   -webkit-animation-delay: 3.2s;
   animation-delay: 3.2s; }
+  @media screen and (max-width: 1200px) {
+    .gaming {
+      width: 17vh;
+      height: 17vh;
+      top: 27vh;
+      right: 2vh; } }
 
 .bass {
   right: 8vh;
@@ -350,6 +375,12 @@ body {
   background-image: url("../images/bass.png");
   -webkit-animation-delay: 3.8s;
   animation-delay: 3.8s; }
+  @media screen and (max-width: 1200px) {
+    .bass {
+      width: 11vw;
+      height: 11vw;
+      right: 4vh;
+      top: 5vh; } }
 
 .section-2 {
   z-index: -1;

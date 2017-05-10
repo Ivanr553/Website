@@ -31,7 +31,8 @@ body {
   justify-content: center; }
 
 a {
-  color: grey; }
+  color: grey;
+  cursor: pointer; }
 
 .black {
   color: #0a0a0a; }
@@ -183,12 +184,64 @@ a {
   font-family: "top";
   font-size: 3.5vw;
   position: absolute;
-  top: 10vh;
-  left: 12vw; }
+  text-align: center;
+  top: 10vh; }
 
-.contact-info {
-  width: auto;
-  height: auto;
+.contact-title-bar {
+  position: absolute;
+  width: 80vw;
+  height: 0.5vh;
+  background-color: grey; }
+
+#contact-title-bar-top {
+  top: 20vh; }
+
+#contact-title-bar-bottom {
+  bottom: 10vh;
+  left: 10vw; }
+
+#contact-body {
+  width: 100vw;
+  height: 75vh;
+  margin-top: 25vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  position: relative; }
+
+#contact-info-text {
+  color: #d2d2d2;
+  font-family: "top";
+  font-size: 2em;
+  width: 40vw;
+  margin: 5vh auto 1vh 15vw; }
+
+#contact-info-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 10vh;
+  width: 100%; }
+
+#contact-info-email {
   color: #d2d2d2;
   font-family: "top";
   font-size: 2.5vw;
@@ -204,7 +257,27 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: auto; }
+  margin: auto;
+  margin-right: 10vw; }
+
+#contact-info-phone {
+  color: #d2d2d2;
+  font-family: "top";
+  font-size: 2.5vw;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto;
+  margin-left: 5vw; }
 
 .contact-info-email {
   display: -webkit-inline-flex;

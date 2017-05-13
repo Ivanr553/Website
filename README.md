@@ -1,8 +1,4 @@
-# Website
-
-#Description
-
-Welcome!
+# Welcome!
 
 This is the repository for my website ivanraffucci.tech. This website is my home on the internet and where I plan to grow my freelance business from. To anyone visiting to just see what's going on, hello! If anyone wants to contribute in any way or has anything to share please feel free to make requests. This site is mostly going to be my own project, but I love getting second opinions and other peoples ideas throw into the mix.
 

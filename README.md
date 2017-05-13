@@ -5,4 +5,4 @@ This is the repository for my website ivanraffucci.tech. This website is my home
 If you are on here and find my work cool or exciting, feel free to contact me at my email: ivanrwebd@gmail.com. I am in the market for a job and looking for a company to grow my skills within so please get in touch with me!
 
 Thank you again for visiting,
-- Ivan Raffucci
+<br>Ivan Raffucci

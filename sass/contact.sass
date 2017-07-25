@@ -1,0 +1,223 @@
+//truetype fonts
+@font-face
+  font-family: "machine"
+  src: url("fonts/MachineScript.ttf") format("truetype")
+
+@font-face
+  font-family: "top"
+  src: url("fonts/TopModern.ttf") format("truetype")
+
+//html tags
+*
+  user-select: none
+  cursor: default
+  color: black
+
+body
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+a
+  color: grey
+  cursor: pointer
+
+//usefull classes
+.black
+  color: rgb(10, 10, 10)
+
+.green
+  color: green
+
+.red
+  color: red
+
+.grey
+  color: grey
+
+.center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: baseline
+
+.align-left
+  text-align: left
+
+.machine
+  font-family: "machine"
+
+.top
+  font-family: "top"
+
+.serif
+  font-family: serif
+
+.default
+  cursor: default
+
+//nav-bar section
+.nav-bar
+  width: 100vw
+  height: 6vh
+  min-width: 300px
+  position: fixed
+  z-index: 500
+  top: 0
+  margin: auto auto 0 auto
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  border-top-right-radius: 0.5vh
+  border-top-left-radius: 0.5vh
+  background-color: rgba(0, 0, 0, 0.5)
+
+.bar
+  width: 100%
+  height: 10%
+  background-color: rgba(0, 0, 0, 0.9)
+  position: absolute
+  top: 45%
+  z-index: 550
+
+.symbol
+  width: auto
+  height: auto
+  margin: auto 3vw auto 3vw
+  z-index: 600
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 1.4em
+  font-family: "top"
+  padding-bottom: 0.3vh
+  padding-top: 0.3vh
+  border-bottom: solid 1px rgba(255, 255, 255, 0)
+  border-top: solid 1px rgba(255, 255, 255, 0)
+
+.landing-sym
+  color: rgb(20, 59, 122)
+
+.about-sym
+  color: lightblue
+
+.portfolio-sym
+  color: white
+
+.apps-sym
+  color: orange
+
+.blog-sym
+  color: rgb(59, 173, 31)
+
+.contact-sym
+  color: grey
+  cursor: default
+
+.sym-hover
+  animation: show-border 500ms forwards
+
+.sym-hover-off
+  animation: hide-border 500ms forwards
+
+//contact-landing
+.section-contact
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+  background-color: rgb(20, 20, 20)
+  cursor: default
+  margin: 0
+
+.contact-title
+  color: white
+  font-family: "top"
+  font-size: 3.5vw
+  position: absolute
+  text-align: center
+  top: 10vh
+  // left: 12vw
+
+.contact-title-bar
+  position: absolute
+  width: 80vw
+  height: 0.5vh
+  background-color: grey
+
+#contact-title-bar-top
+  top: 20vh
+
+#contact-title-bar-bottom
+  bottom: 10vh
+  left: 10vw
+
+#contact-body
+  width: 100vw
+  height: 75vh
+  margin-top: 25vh
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: flex-start
+  position: relative
+
+#contact-info-text
+  color: rgb(210, 210, 210)
+  font-family: "top"
+  font-size: 2em
+  width: 40vw
+  margin: 5vh auto 1vh 15vw
+
+#contact-info-container
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin-top: 10vh
+  width: 100%
+
+#contact-info-email
+  color: rgb(210, 210, 210)
+  font-family: "top"
+  font-size: 2.5vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: auto
+  margin-right: 10vw
+
+#contact-info-phone
+  color: rgb(210, 210, 210)
+  font-family: "top"
+  font-size: 2.5vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: auto
+  margin-left: 5vw
+
+.contact-info-email
+  display: inline-flex
+
+.contact-info-bottom
+  color: rgb(210, 210, 210)
+  font-family: "top"
+  font-size: 3.5vw
+  position: absolute
+  right: 3vw
+  bottom: 3vh
+
+.contact-filler
+  background-color: rgb(20, 20, 20)

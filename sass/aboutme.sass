@@ -1,0 +1,533 @@
+//truetype fonts
+@font-face
+  font-family: "machine"
+  src: url("fonts/MachineScript.ttf") format("truetype")
+
+@font-face
+  font-family: "top"
+  src: url("fonts/TopModern.ttf") format("truetype")
+
+//html tags
+*
+  user-select: none
+  cursor: default
+  color: black
+
+body
+  padding: 0
+  margin: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  background-color: rgb(35, 35, 35)
+  overflow-y: scroll
+  @media screen and (max-width: 1370px)
+    font-size: 75%
+
+::-webkit-scrollbar
+    display: none
+
+
+//usefull classes
+.black
+  color: rgb(10, 10, 10)
+
+.green
+  color: green
+
+.red
+  color: red
+
+.grey
+  color: grey
+
+.center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: baseline
+
+.align-left
+  text-align: left
+
+.machine
+  font-family: "machine"
+
+.top
+  font-family: "top"
+
+.serif
+  font-family: serif
+
+.default
+  cursor: default
+
+//nav-bar section
+.nav-bar
+  width: 100vw
+  height: 6vh
+  min-width: 300px
+  position: fixed
+  z-index: 500
+  top: 0
+  margin: auto auto 0 auto
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  border-top-right-radius: 0.5vh
+  border-top-left-radius: 0.5vh
+  background-color: rgba(0, 0, 0, 0.5)
+
+.bar
+  width: 100%
+  height: 10%
+  background-color: rgba(0, 0, 0, 0.9)
+  position: absolute
+  top: 45%
+  z-index: 550
+
+.symbol
+  width: auto
+  height: auto
+  margin: auto 3vw auto 3vw
+  z-index: 600
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 1.4em
+  font-family: "top"
+  padding-bottom: 0.3vh
+  padding-top: 0.3vh
+  border-bottom: solid 1px rgba(255, 255, 255, 0)
+  border-top: solid 1px rgba(255, 255, 255, 0)
+
+.landing-sym
+  color: rgb(20, 59, 122)
+
+.about-sym
+  color: lightblue
+  cursor: default
+
+.portfolio-sym
+  color: white
+
+.apps-sym
+  color: orange
+
+.blog-sym
+  color: rgb(59, 173, 31)
+
+.contact-sym
+  color: grey
+
+.sym-hover
+  animation: show-border 500ms forwards
+
+.sym-hover-off
+  animation: hide-border 500ms forwards
+
+
+//about me section general use classes
+.about-me-info
+  margin-top: 7%
+  width: 36vw
+  color: rgb(235, 235, 235)
+  font-size: 1.6em
+
+.about-me-title
+  position: absolute
+  top: 8vh
+  font-size: 4em
+  flex-direction: column
+  display: flex
+  align-items: center
+  justify-content: center
+  color: black
+
+.half-section
+  width: 50vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+//content landing
+.section
+  width: 100vw
+  max-width: 100%
+  height: 100vh
+  position: relative
+
+.landing
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  font-size: 1em
+
+.half-section-landing
+  position: relative
+  height: 94vh
+  margin-top: 6vh
+  width: 60%
+
+.half-section-landing-left
+  background-color: white
+
+.half-section-landing-right
+  width: 40%
+
+.about-me-title-landing
+  position: absolute
+  top: 18vh
+  right: 12vw
+  font-size: 5.5em
+  flex-direction: column
+  display: flex
+  align-items: center
+  justify-content: center
+
+.landing-info-title
+  position: absolute
+  left: 10%
+  top: 25%
+  font-size: 5em
+  text-align: center
+  color: black
+
+.about-me-info-landing
+  position: absolute
+  left: 14%
+  top: 40%
+  width: 40vw
+  color: black
+  font-size: 1.6em
+
+.landing-intro-1
+  animation: fade-left 2.5s forwards
+  animation-delay: 500ms
+  opacity: 0
+
+.landing-intro-2
+  animation: fade-left 2.5s forwards
+  animation-delay: 1.8s
+  opacity: 0
+
+.landing-scroll-notification
+  position: absolute
+  bottom: 20%
+  left: 30%
+  color: rgb(235, 235, 235)
+  font-size: 1.5em
+  animation: fade-in 2.5s forwards
+  animation-delay: 7s
+  opacity: 0
+  color: black
+
+.landing-section-bubble-icons
+  position: absolute
+  background-size: cover
+  position: center
+  border-radius: 100vh
+  margin: 0
+  padding: 0
+  animation: fade-in-bubbles 2.5s forwards
+  animation-delay: 500ms
+  opacity: 0
+
+.portrait
+  right: 2vw
+  bottom: 5vh
+  width: 50vh
+  height: 50vh
+  @media screen and (max-width: 1200px)
+    width: 30vw
+    height: 30vw
+  background-image: url("../images/portrait-edit.jpg")
+  background-position: right
+
+.web-design
+  right: 45vh
+  top: 22vh
+  width: 25vh
+  height: 25vh
+  @media screen and (max-width: 1200px)
+    width: 21vh
+    height: 21vh
+    right: 36vh
+    top: 28vh
+  background-image: url("../images/web-design.png")
+  animation-delay: 2s
+
+.html-css
+  right: 22vh
+  top: 5vh
+  width: 26vh
+  height: 26vh
+  @media screen and (max-width: 1200px)
+    width: 23vh
+    height: 23vh
+    top: 10vh
+    right: 18vh
+  background-image: url("../images/html-css.png")
+  animation-delay: 2.6s
+
+.gaming
+  right: 3vh
+  top: 20vh
+  width: 18vh
+  height: 18vh
+  @media screen and (max-width: 1200px)
+    width: 17vh
+    height: 17vh
+    top: 27vh
+    right: 2vh
+  background-image: url("../images/gaming.png")
+  animation-delay: 3.2s
+
+.bass
+  right: 8vh
+  top: 4vh
+  width: 13vh
+  height: 13vh
+  @media screen and (max-width: 1200px)
+    width: 11vw
+    height: 11vw
+    right: 4vh
+    top: 5vh
+  background-image: url("../images/bass.png")
+  animation-delay: 3.8s
+
+.section-2
+  z-index: -1
+  height: 200vh
+
+.section-3
+  z-index: -1
+  display: none
+
+//section-skills
+.section-skills
+  position: fixed
+  top: 0
+  left: 0
+  display: none
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  opacity: 0
+
+.skill-bubble-container
+  position: absolute
+  top: 0
+  width: 100%
+  height: 40%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+
+//skill-bubbles
+.skill-bubble
+  border-radius: 100%
+  background-color: blue
+  margin: 5vh
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  text-align: center
+  font-size: 1.8em
+  border: solid 0.2vh black
+  background-size: cover
+  background-position: center
+
+.skill-html
+  background-color: rgb(91, 128, 216)
+  background-image: url("../images/html.jpg")
+  width: 20vh
+  height: 20vh
+  margin-top: 20vh
+
+.skill-sass
+  background-color: rgb(242, 138, 209)
+  background-image: url("../images/sass.png")
+  width: 20vh
+  height: 20vh
+  margin-top: 20vh
+
+.skill-javascript
+  background-color: rgb(165, 79, 209)
+  background-image: url("../images/js.png")
+  background-position: bottom right
+  width: 25vh
+  height: 25vh
+
+.skill-angular
+  background-color: rgb(230, 230, 230)
+  background-image: url("../images/angular2.png")
+  width: 12vh
+  height: 12vh
+  margin-top: 40vh
+
+.skill-node
+  background-color: black
+  background-image: url("../images/node.png")
+  width: 12vh
+  height: 12vh
+  margin-top: 40vh
+
+//skill page information
+.skill-info
+  position: absolute
+  bottom: 5%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+.skill-content-title
+  position: absolute
+  top: -22%
+  font-size: 5em
+  text-decoration: underline
+  color: rgb(74, 123, 206)
+
+.skill-info-content-wrapper
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding-top: 4vh
+  padding-bottom: 5vh
+
+.skill-info-content
+  width: 60%
+  font-size: 2em
+  color: rgb(220, 220, 220)
+  font-style: bold
+
+//content-body 2
+.section-about-me
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  background-color: rgb(205, 205, 205)
+
+.about-me-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 50vw
+  height: 50vh
+
+.about-me-content-info
+  align-items: flex-end
+
+.about-me-symbol-bar
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  margin-top: 5vh
+
+.about-me-symbol
+  width: 8vw
+  height: 8vw
+  background-size: cover
+  border-radius: 100vw
+  cursor: pointer
+  transform: scale(1)
+  transition-duration: 500ms
+
+.about-me-symbol:hover
+  transform: scale(1.1)
+  transition-duration: 500ms
+
+.trombone
+  background-image: url("../images/trombone.png")
+  border-radius: 0
+
+.fitness
+  background-image: url("../images/physical-sym.png")
+
+.environment
+  background-image: url("../images/env-symbol.png")
+  width: 10vw
+  height: 10vw
+  margin-left: 3vw
+
+.info
+  display: none
+  margin-top: 7%
+  width: 36vw
+  font-size: 1.6em
+  width: 60%
+  background-color: rgba(50, 50, 50, 0.2)
+  color: black
+  padding: 2vw
+  margin-top: 4vw
+  border-radius: 1vw
+
+.info-home
+  width: 60%
+  background-color: rgba(50, 50, 50, 0.2)
+  color: black
+  padding: 2vw
+  margin-top: 4vw
+  border-radius: 1vw
+
+//animations
+@keyframes show-border
+  100%
+    border-color: rgba(255, 255, 255, 0.6)
+
+@keyframes hide-border
+  0%
+    border-color: rgba(255, 255, 255, 0.6)
+  100%
+    border-color: rgba(255, 255, 255, 0)
+
+@keyframes fade-up
+  0%
+    opacity: 0
+    transform: translatey(5vh)
+  100%
+    opacity: 1
+    transform: translatey(0vh)
+
+@keyframes fade-right
+  0%
+    opacity: 0
+    transform: translatex(5vh)
+  100%
+    opacity: 1
+    transform: translatex(0vh)
+
+@keyframes fade-left
+  0%
+    opacity: 0
+    transform: translatex(-5vh)
+  100%
+    opacity: 1
+    transform: translatex(0vh)
+
+@keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fade-in-bubbles
+  0%
+    opacity: 0
+  100%
+    opacity: 0.9

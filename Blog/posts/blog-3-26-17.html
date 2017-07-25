@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <!--style sheet-->
+    <link rel="stylesheet" href="../css/blog.css">
+
+    <!--  favicon tags -->
+      <link rel="apple-touch-icon" sizes="57x57" href="../../favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+    <!-- meta tag and title -->
+    <meta charset="utf-8">
+    <title>Blog 3/26/17</title>
+  </head>
+  <body>
+
+        <div class="back-home" onclick="backToBlogHome()">
+          Blog Home
+        </div>
+
+    <div class="header">
+      <h1>The Free Coder Blog</h1>
+    </div>
+
+    <div class="post body">
+          <div class="left">
+            <
+          </div>
+          <span>
+            Blog Post 3/19/17: Var, Let, and Const<br><br>
+
+            Hello Again! My name is Ivan Raffucci and this will be my second blog post! Hooray!<br><br>
+
+            In this blog my goal is to teach programming concepts and make it easy to understand for beginners.<br><br>
+
+            Okay, so today I will be wrtiting about es6 the "new" update for javascript. Being someone who learned javascript in es5 I was reluctant to start learning the changes that es6 made since I thought it would just lead to confusion and preventing my progress. After taking the time to learn...It's awesome. While I can't say I have used every single feature that was deployed in es6, I can definitely appreciate some of the changes. One of those being the changes to variables!<br><br>
+
+            As most of you know, javascript has the ability to create vairables to store a value as a Boolean, String, and Number. Learning the way that variables worked in es5 was pretty straight forward, create the variable by:
+
+          <div class="tab">
+                var x;<br><br>
+
+            Then, assign it a value:<br><br>
+
+                x = 5;
+          </div>
+
+            From here use that variable as you need. Now, its important to talk about scope. Scope is the computer's "sight". When you assign values to variables, this assignment will only be valid within the scope that is available to that variable. In javascript, variables deal with scope in ineresting ways... lets take a look!
+          <div class="tab">
+              var x = 5;<br><br>
+
+              function() {<br>
+              &emsp;  return x;<br>
+              }
+          </div>
+            Running this code will have the funciton return 5! Even though variable x was not called in function, it found the value that we gave it before the function. This is due to two things: one, javascript can store global variables that any function can then access once called; Two, javascript when looking for the value of a variable will seek whithin the function that it is currently inside. If the value is not found within the function, then it will search directly ouside the function until it reaches the global scope at which it gives up. In this example, we see that the x variable was called in the global scope, and since the function did not have the value of x whithin its scope it searched for the value in the global scope and found it. Let's look at one more example:
+
+          <div class="tab">
+            function() {<br>
+            &emsp;  var x = 5;<br>
+            &emsp;  return;<br>
+            }<br><br>
+
+            function(){<br>
+            &emsp;  return x;<br>
+            }
+          </div>
+
+            As is to be expected, x is not returned in the second function and it returns undefined. Lets look at one final example:
+
+          <div class="tab">
+            var x = 10;<br><br>
+
+            function() {<br>
+            &emsp;  x = 5;<br>
+            &emsp;  return x;<br>
+            }<br>
+
+            function() {<br>
+            &emsp;  return x;<br>
+            }
+          </div>
+            In this case, we see that the first function returns 5, as is expected, but now, the second function will also return 5. Since var x was called in the global scope, it is now accessible to all functions. What happens here is that the x that is called in function1 is the same global x that was called 10 which was just set to 5. It returns the value, 5, then when we call the second function, it looks for x outside its scope and finds the global value for variable x which has been set to 5 due to the first function and thus returns 5.<br><br>
+
+            Code like this leads to some pretty nasty bugs as calling a variable in the global scope leaves you exposed to accidentally changing it in ways you did not intend having sometimes catastrophic consequences.<br><br>
+
+            Now that we have var under our belts, lets look at the new tools es6 gave us: const and let. Let and const are pretty straight forward in their functionality and after seeing how var works, you will really apprecite the problems they solve.<br><br>
+
+            "Let" is very similar to var in that it sets a value to a variable, but what changes is scope. The scope of let is much different than var in that the let variables only apply to the scope of the function they are in. In the case of function scope, they work very much the same. The differece is when we start adding in things like for-loops and if-statements:
+
+          <div class="tab">
+                var i = 200;<br>
+                for(var i = 0, i < 10; i++) {<br>
+                &emsp;  console.log(i);<br>
+                }<br>
+                console.log(i)<br><br>
+
+            -----------------------------------------<br><br>
+
+                var i=200;<br>
+                for(let i = 0; i < 10; i++) {<br>
+                &emsp;  console.log(i);<br>
+                }<br>
+                console.log(i);
+          </div>
+
+            In the first example which uses var inside the for loop, the for loop console.log will log 0-9. The outside console.log will then log 9 as the for loop set i to 9 when it finished. In the second example however, the first console.logs will work like the last, but then the second will log 200. This is becuse when working within brackets "{}" let will keep its scope within them and the value will only be valid within the scope of the brackets. Using let allows for "safer" variable calling as it forces stricter parameters on the value assignment whithin javascript. Pretty cool if you ask me!<br><br>
+
+            Okay, now on to const. This is probably the most straight forward of them all. Like var and let, it assigns a value to a variable. But, const, as might be assumed, turns the variable into a constant which is immutable. That means that no matter where you use it in your code, javascript is not allowed to change it for whatever reason. Now there is a small exception in object property values, but we will leave that for another day. But that is it! Const is great for setting important values that will stay persistent in your code and you do not want to change accidentally.<br><br>
+
+            Okay, so my final thoughts on this: there is no reason to ever use var anymore. In every situation you would use var, you can now just use let. But in every case you can, you should use const. Const ensures that you can't accidentally change important variables, and you then use let for that variables that you want to call within functions to manipulate data.<br><br>
+
+            Thanks for reading everyone! I will be posting these every Sunday and my current plan is to create guides on javascript concepts that I found tricky or that I feel are worth discussing. My current learning is taking me through the back end using the MEAN stack and I have been really enjoying it. I plan to talk about that once I gain a better understanding of it. Anyway, until next time!<br><br>
+
+            Ivan Raffucci
+          </span>
+          <div class="right">
+            >
+          </div>
+          </div>
+  </body>
+  <script type="text/javascript" src="../javascript/posts-js.js"></script>
+</html>

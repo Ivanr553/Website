@@ -1,0 +1,754 @@
+/*Fonts*/
+@font-face
+  font-family: "machine"
+  src: url("fonts/MachineScript.ttf") format("truetype")
+
+@font-face
+  font-family: "top"
+  src: url("fonts/TopModern.ttf") format("truetype")
+
+*
+  user-select: none
+
+
+body, html
+  padding: 0
+  margin: 0
+  background-color: rgb(237, 237, 237)
+  max-width: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+div
+  margin: 0
+  padding: 0
+
+a
+  color: rgb(140, 35, 35)
+
+h1
+  font-size: 6vh
+
+section
+  margin: 0
+  overflow: hidden
+
+
+
+.black
+  color: rgb(10, 10, 10)
+
+.green
+  color: green
+
+.red
+  color: red
+
+.grey
+  color: grey
+
+.blue
+  color: blue
+
+.center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: baseline
+
+.machine
+  font-family: "machine"
+
+.top
+  font-family: "top"
+
+.serif
+  font-family: serif
+
+.default
+  cursor: default
+
+
+// sections
+.section
+  position: absolute
+  top: 0
+  right: -100vw
+
+
+.back-to-top
+  width: 2.4vw
+  min-width: 40px
+  height: 2.4vw
+  min-height: 40px
+  background-color: rgba(0, 0, 0, 0.6)
+  color: rgba(255, 255, 255, 0.9)
+  position: fixed
+  right: 1vw
+  bottom: 1vh
+  font-size: calc(10px + 1vw)
+  align-content: center
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  cursor: pointer
+  z-index: 5
+  display: none
+
+.back-to-top-div
+  margin-bottom: -1vh
+
+
+.nav-bar
+  width: 100%
+  height: 6vh
+  min-width: 300px
+  position: fixed
+  z-index: 500
+  bottom: 0
+  margin: auto auto 0 auto
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  border-top-right-radius: 0.5vh
+  border-top-left-radius: 0.5vh
+  background-color: rgba(0, 0, 0, 0.5)
+
+.bar
+  width: 100%
+  height: 10%
+  background-color: rgba(0, 0, 0, 0.9)
+  position: absolute
+  top: 45%
+  z-index: 550
+
+.symbol
+  width: auto
+  height: auto
+  margin: auto 1vw auto 1vw
+  z-index: 600
+  cursor: pointer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 12px
+  font-family: "top"
+  padding-bottom: 0.2vh
+  border-bottom: solid 1px rgba(255, 255, 255, 0)
+  animation: hide-border 500ms forwards
+
+.landing-sym
+  color: rgb(20, 59, 122)
+
+.about-sym
+  color: lightblue
+
+.websites-sym
+  color: white
+
+.apps-sym
+  color: orange
+
+.blog-sym
+  color: rgb(59, 173, 31)
+
+.contact-sym
+  color: grey
+
+
+.landing
+  height: 100vh
+  width: 100%
+  background-color: rgb(15, 15, 15)
+  position: relative
+  background-size: cover
+  background-position: right bottom
+
+#name
+  font-size: 4.5vw
+  position: absolute
+  right: 25vw
+  top: 40vh
+  color: rgba(250, 250, 250, 0.8)
+  cursor: default
+  opacity: 0
+  animation: fade-right 3s forwards
+  animation-delay: 500ms
+
+#web-dev-landing
+  font-size: 3vmin
+  margin-left: 1.3vw
+  margin-top: -0.2vh
+  color: rgba(56, 121, 226, 0.4)
+
+#landing-list
+  font-size: 3vmin
+  position: absolute
+  left: 28vw
+  top: 60vh
+  padding: 1vh
+  line-height: 140%
+  cursor: default
+  color: rgba(200, 200, 200, 0.8)
+
+.list-item
+  animation: fade-up 2s forwards
+  opacity: 0
+
+#list-freelancer
+  animation-delay: 2s
+
+#list-web
+  animation-delay: 3s
+
+#list-extra
+  animation-delay: 4s
+
+
+
+.section-about-me
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  font-size: 3vw
+  position: relative
+  overflow: hidden
+  background-image: url("images/portrait-edit-1.jpg")
+  background-size: cover
+  background-position: right
+  z-index: 1
+  top: -100vh
+  right: -100vw
+  margin: 0
+
+.about-me-title
+  position: absolute
+  top: 3vh
+  font-size: 20px
+  color: rgb(10, 10, 10)
+  flex-direction: column
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 3
+  opacity: 1
+
+.about-me-bar
+  width: 80%
+  height: 0.6vh
+  display: flex
+  background-color: rgba(30, 30, 30, 1)
+  transform: skewX(320deg)
+
+.about-me-info
+  width: 33vw
+  min-width: 400px
+  height: auto
+  max-height: 60vh
+  font-size:calc(15px)
+  padding: 2vw
+  padding-left: 0
+  position: absolute
+  color: rgb(235, 235, 235)
+  letter-spacing: 1px
+  left: 3vw
+  z-index: 2
+  opacity: 1
+
+
+
+.section-web
+  height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: rgba(0, 0, 0, 0)
+  position: relative
+  overflow: hidden
+  top: -200vh
+  right: -100vw
+  margin: 0
+
+.section-web-title
+  font-size: 20px
+  position: absolute
+  padding: 0.8vw
+  cursor: default
+  top: 5vh
+
+.website-block
+  display: flex
+  width: 100%
+  height: 35vh
+  margin: auto auto 0 auto
+  background-size: cover
+  background-position: center
+  position: relative
+  padding: 1vh
+  cursor: pointer
+  filter: grayscale(20%)
+  font-size: calc(10px + 1.5vw)
+  opacity: 1
+
+.grey-cover
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.2)
+  position: absolute
+  top: 0
+  left: 0
+  opacity: 0
+  animation: fade-out 200ms forwards
+
+.website-block:hover .grey-cover
+  animation: fade-in 600ms forwards
+
+#carla
+  background-image: url("images/Carla-Web.png")
+  animation-delay: 500ms
+
+#tokiwa
+  background-image: url("images/Tokiwa-Web.png")
+  color: white
+  animation-delay: 500ms
+  margin-top: 0
+  margin-bottom: 6vh
+
+
+.apps
+  background-color: rgba(237, 67, 30, 0.8)
+
+.section-apps
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  position: relative
+  z-index: 1
+  background-color: rgba(237, 67, 30, 0.8)
+  top: -300vh
+  right: -100vw
+  margin: 0
+
+.git
+  width: 5vw
+  height: 5vw
+  position: absolute
+  left: 5vw
+  top: 10vh
+  background-image: url("images/git-edit.png")
+  background-size: cover
+  background-position: center
+  opacity: 0.7
+  animation: git-hover-off 500ms forwards
+  cursor: pointer
+
+.git:hover
+  animation: git-hover 500ms forwards
+
+.codepen
+  width: 5vw
+  height: 5vw
+  position: absolute
+  right: 5vw
+  top: 10vh
+  background-image: url("images/codepen.png")
+  background-size: cover
+  background-position: center
+  opacity: 0.7
+  animation: git-hover-off 500ms forwards
+  cursor: pointer
+
+.codepen:hover
+  animation: git-hover 500ms forwards
+
+.application-title
+  font-size: 15px
+  position: absolute
+  padding: 0.8vw
+  cursor: default
+  top: 9vh
+  z-index: 4
+  font-family: "machine"
+
+.bubble-container
+  width: 40vw
+  height: 73vh
+  display: flex
+  flex-direction: row
+  align-items: flex-start
+  position: absolute
+  bottom: 5vh
+  left: 4vw
+  padding: 1vw
+  z-index: 2
+
+.bubble-wrap
+  width: 100px
+  height: 100px
+  margin-top: 10vh
+  position: absolute
+
+.bubble
+  width: 100%
+  height: 100%
+  border-radius: 2vw
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  text-align: center
+  background-size: cover
+  background-position: center
+  position: relative
+  opacity: 1
+  z-index: 3
+
+.raincheck
+  background-image: url("images/raincheck.png")
+
+// .information-container
+//   width: 100%
+//   height: auto
+//   display: none
+//   position: absolute
+//   padding: 1vw
+//   z-index: 2
+//   opacity: 0
+//   user-select: none
+//   cursor: default
+//   border-radius: 0.5vw
+//
+.information-container
+  display: none
+  opacity: 0
+  flex-direction: column
+  justify-content: center
+  align-items: left
+
+// .raincheck-information-title
+//   margin-top: 0
+//   margin-left: 5vw
+//   font-size: 18px
+//   font-family: "machine"
+//   text-decoration: underline
+//
+// .raincheck-information-body
+//   font-size: 12px
+//   width: 95%
+//   margin: auto
+//   font-family: serif
+//   color: rgba(10, 10, 10, 1)
+//
+// .raincheck-langs-title
+//   font-size: 18px
+//   margin-left: 4vw
+//
+// .raincheck-langs
+//   margin-left: 8vw
+//   margin-top: -1vh
+//   font-family: serif
+//   font-size: 12px
+//
+
+
+.section-blog
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  overflow-y: hidden
+  background-image: url("images/blog-back.jpg")
+  background-size: cover
+  position: relative
+  top: -400vh
+  right: -100vw
+  margin: 0
+
+.section-blog-center
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.blog-title
+  font-size: 20px
+  position: absolute
+  padding: 0.8vw
+  cursor: default
+  top: 9vh
+  z-index: 4
+  font-family: "machine"
+
+.blog-info
+  font-size: 20px
+  width: 80vw
+  height: auto
+  background-color: rgba(255, 255, 255, 0.4)
+  padding: 2vw 1.5vw 2vw 1.5vw
+  border-radius: 1vw
+  opacity: 1
+  display: block
+  font-family: "top"
+  margin-top: 15vh
+
+
+
+
+.section-contact
+  height: 100vh
+  width: 100vw
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+  background-color: rgb(20, 20, 20)
+  cursor: default
+  top: -500vh
+  right: -100vw
+  margin: 0
+
+.contact-title
+  color: white
+  font-family: "top"
+  font-size: 20px
+  position: absolute
+  top: 10vh
+  left: 12vw
+  opacity: 1
+
+.contact-info
+  width: auto
+  height: auto
+  color: rgb(210, 210, 210)
+  font-family: "top"
+  font-size: 30px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin: auto
+  opacity: 1
+
+.contact-info-email
+  display: inline-flex
+
+.contact-info-bottom
+  color: rgb(210, 210, 210)
+  font-family: "top"
+  font-size: 30px
+  position: absolute
+  right: 3vw
+  bottom: 7vh
+  opacity: 1
+
+.contact-filler
+  background-color: rgb(20, 20, 20)
+
+
+
+// ANIMATIONS
+@keyframes drop-down
+  0%
+    transform: translatey(-7vh)
+
+  100%
+    transform: translatey(0)
+
+
+@keyframes drop-down-fade
+  0%
+    transform: translatey(-7vh)
+
+  100%
+    opacity: 1
+    transform: translatey(0)
+
+
+@keyframes fade-in
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+@keyframes fade-out
+  0%
+    opacity: 1
+
+  100%
+    opacity: 0
+
+
+@keyframes slide-in-left
+  0%
+    opacity: 1
+    transform: translatex(-50vw)
+
+  100%
+    opacity: 1
+    transform: translatex(0)
+
+
+@keyframes slide-in-right
+  0%
+    opacity: 1
+    transform: translatex(50vw)
+
+  100%
+    opacity: 1
+    transform: translatex(0)
+
+
+@keyframes fade-up
+  0%
+    opacity: 0
+    transform: translatey(5vh)
+
+  100%
+    opacity: 1
+    transform: translatey(0vh)
+
+
+@keyframes fade-right
+  0%
+    opacity: 0
+    transform: translatex(5vh)
+
+  100%
+    opacity: 1
+    transform: translatex(0vh)
+
+
+@keyframes fade-left
+  0%
+    opacity: 0
+    transform: translatex(-5vh)
+
+  100%
+    opacity: 1
+    transform: translatex(0vh)
+
+
+@keyframes slide-up
+  0%
+    transform: translatey(0)
+
+  15%
+    border-top-color: rgba(0, 0, 0, 0)
+
+  30%
+    background-color: rgba(255, 255, 255, 0)
+    border-right-color: rgba(0, 0, 0, 0)
+    border-left-color: rgba(0, 0, 0, 0)
+
+  45%
+    border-bottom-color: rgba(0, 0, 0, 0)
+
+  50%
+    transform: translatey(0)
+
+  100%
+    background-color: rgba(255, 255, 255, 0)
+    transform: translatey(-35vh)
+    font-size: 3vw
+    border-color: rgba(0, 0, 0, 0)
+
+
+@keyframes fade-in-bubble
+  0%
+    opacity: 0
+
+  75%
+    opacity: 0
+
+  100%
+    opacity: 0.8
+
+
+@keyframes show-back
+  100%
+    background-color: rgba(50, 50, 50, 0.9)
+
+
+@keyframes move-left
+  0%
+    transform: translatex(0)
+
+  100%
+    transform: translatex(-20vw)
+
+
+@keyframes fade-in-info
+  0%
+    opacity: 0
+
+  70%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+@keyframes translate-left
+  0%
+    transform: translatex(0)
+
+  100%
+    transform: translatex(-100vw)
+
+
+@keyframes translate-left-more
+  0%
+    transform: translatex(-100vw)
+
+  100%
+    transform: translatex(-200vw)
+
+
+@keyframes translate-left-landing
+  0%
+    transform: translatex(100vw)
+
+  100%
+    transform: translatex(0)
+
+
+@keyframes show-border
+  100%
+    border-color: rgba(255, 255, 255, 0.6)
+
+
+@keyframes hide-border
+  0%
+    border-color: rgba(255, 255, 255, 0.6)
+
+  100%
+    border-color: rgba(255, 255, 255, 0)
+
+
+@keyframes grow-bubble-fade
+  0%
+    opacity: 1
+    transform: scale(1)
+
+  100%
+    opacity: 0
+    transform: scale(3)

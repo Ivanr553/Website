@@ -21,7 +21,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   <!-- css -->
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/contact.css">
   <!-- title -->
     <title>Ivan Raffucci</title>
   <!-- scripts -->
@@ -35,27 +35,37 @@
 </head>
   <body>
 
+    <div class="nav-bar">
+      <div class="symbol landing-sym" onclick="openLanding()">Landing</div>
+      <div class="symbol about-sym" onclick="openAboutme()">About Me</div>
+      <div class="symbol portfolio-sym" onclick="openPortfolio()">Portfolio</div>
+      <div class="symbol blog-sym" onclick="openBlog()">Blog</div>
+      <div class="symbol contact-sym">Contact Me</div>
+    </div>
 
-        <div class="nav-bar">
-          <div class="symbol landing-sym">Landing</div>
-          <div class="symbol about-sym" onclick="openAboutMe()">About Me</div>
-          <div class="symbol portfolio-sym" onclick="openPortfolio()">Portfolio</div>
-          <div class="symbol blog-sym" onclick="openBlog()">Blog</div>
-          <div class="symbol contact-sym" onclick="openContact()">Contact Me</div>
+    <div class="section section-contact">
+      <div class="contact-title">Let's get in touch!</div>
+      <div class="contact-title-bar" id="contact-title-bar-top"></div>
+      <div id="contact-body">
+        <div id="contact-info-text">
+          Thank you for taking the time to visit my website! If you would like to contact me you can reach out to me at my email or call me on my cell phone, lsited below. Let's take your business to the next level.
+        </div>
+        <div class="contact-title-bar" id="contact-title-bar-bottom"></div>
+        <div id="contact-info-container">
+          <div id="contact-info-email">
+            Email me at: <a class="contact-info-email" href="mailto:ivanrwebd@gmail.com">ivanrwebd@gmail.com</a>
+          </div>
+          <div id="contact-info-phone">
+            Call me at: <a href="tel:805-624-1556">(805) 624-1556</a>
+          </div>
         </div>
 
-        <section class="section landing">
-          <span class="serif" id="name">
-            Ivan Raffucci
-            <br><div class="top" id="web-dev-landing">Web Development</div>
-          </span>
-          <div id="landing-list">
-            <div class="list-item" id="list-freelancer">- Freelancer -</div>
-            <div class="list-item" id="list-web">- Web Developer -</div>
-          </div>
+      </div>
 
-
-        </section>
-        <script src="javascript/index.js"></script>
+      <!-- <div class="contact-info-bottom">
+        Ivan Raffucci
+      </div> -->
+    </div>
+    <script src="javascript/contact.js"></script>
   </body>
 </html>

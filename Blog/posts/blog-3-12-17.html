@@ -1,0 +1,265 @@
+<html>
+  <head>
+    <!--style sheet-->
+    <link rel="stylesheet" href="../css/blog.css">
+
+    <!--  favicon tags -->
+      <link rel="apple-touch-icon" sizes="57x57" href="../../favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="../../favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="../../favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="../../favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="../../favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="../../favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="../../favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="../../favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="../../favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="../../favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="../../favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="../../favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="../../favicon/favicon-16x16.png">
+      <link rel="manifest" href="/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+
+    <!-- meta tag and title -->
+    <meta charset="utf-8">
+    <title>Free Coder Blog</title>
+  </head>
+  <body>
+
+        <div class="back-home" onclick="backToBlogHome()">
+          Blog Home
+        </div>
+
+    <div class="header">
+      <h1>The Free Coder Blog</h1>
+    </div>
+
+    <div class="post body">
+      <div class="left">
+        <
+      </div>
+      <span>
+        Blog Post 3/12/17: Recursive Functions<br><br>
+
+        &emsp;&emsp;&emsp;Hello! My name is Ivan Raffucci and this is my blog where I will be writing about my coding experience as I learn new concepts and ideas involving web development and programming. I am not boasting any incredible knowledge or skill in this discipline, I'm just someone that has found a passion in programming and would like to write about what I am currently learning. In writing this blog I hope to gain a better understanding of some of the more difficult concepts involving programming and also explain programming concepts in easy to understand terms.<br><br>
+
+        So! Recursive functions!<br><br>
+
+        What is a recursive function?<br><br>
+
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Recursive functions are functions that calls themselves.<br><br>
+
+        &emsp;&emsp;&emsp;That's it? Yup! Let's look at a simple example of recursion so that we can talk about this in more concrete ways:
+
+<div class="tab">
+        function count(x) {<br>
+        &emsp;    if(x > 0) {<br>
+        &emsp;&emsp;    console.log(x);<br>
+        &emsp;&emsp;	    count(x-1);<br>
+        &emsp;    }<br>
+        &emsp;     else {<br>
+        &emsp;&emsp;	return;<br>
+        &emsp;    }<br>
+        }
+</div>
+
+        &emsp;&emsp;&emsp;This is a very straight forward function that looks at the use of recursion to repeat a certain action while something is true. In this case, the function will continue to call itself while x is > 0 and each time it calls on itself it will then log the current value of x as it runs. Once it hits 0 it will stop.<br><br>
+
+        &emsp;&emsp;&emsp;Seems straight forward right? Alright lets move on to something a bit more complex.<br><br>
+
+        &emsp;&emsp;&emsp;Another example of recursion would be to calculate factorials. A factorial is the result of multiplying every cumulative number before the number including the current number itself. An example: 5! (the ! is the symbol for factorization) would equal = 1 * 2 * 3 * 4 * 5 = 120. You might see how recursion may apply in this situation well; if we can have the function call on itself and take the number it is on and multiply it to the current accumulated result we can get the answer. Let's look at the code for this example:<br><br><br>
+
+<div class="tab">
+        function factor(x) {<br>
+        &emsp;     //this will weed out any incorrect inputs and end the function<br>
+        &emsp;     if(x <= 0) {<br>
+        &emsp;&emsp;    	return 1;<br>
+        &emsp;     }<br>
+        &emsp;     //do your magic<br>
+        &emsp;     else {<br>
+        &emsp;&emsp;      	return x * factor(x - 1);<br>
+        &emsp;       }<br>
+        }
+</div>
+
+        &emsp;&emsp;&emsp;If we follow the code, we can see that the function factor will take an argument x which will be the number we want to factor. From there, the function checks to see if the number x is less than or equal to 0.
+<div class="tab">
+        	if(x <= 0) {<br>
+        	&emsp;   return 1;<br>
+        	}
+</div>
+        &emsp;&emsp;&emsp;If it is, return 1; Otherwise, it will take the number x and then call the function again with the argument (x - 1).
+<div class="tab">
+        	else {<br>
+        	 &emsp;  return x * factor(x - 1);<br>
+        	}
+</div>
+        &emsp;&emsp;&emsp;What this does is call the function again with the number that is 1 less than x. This will continue until the number turns to 0 when it ends the recursion and forces the answer out of the function. Now, let's look at how the function will calculate 5!.<br><br>
+
+        &emsp;&emsp;&emsp;We call the function as factor(5). It will then go straight to the else case inside the function and return: 5 * factor(4). Then when factor(4) is called it will run through the function again and return: 4 * factor(3). This return is still within the original return stack so at this point the entire return stack is 5 * 4 * factor(3). This then continues until it reaches factor(1-1) which will then make x = 0 and bring us to return 1 due to our if statement.
+<div class="tab">
+        	if(x <= 0) {<br>
+        	&emsp;   return 1;<br>
+        	}
+</div>
+        &emsp;&emsp;&emsp;This then ends the recursion as the return statement in that if statement only returns the number1. So the function's final return statement is 5 * 4 * 3 * 2 * 1 * 1(this extra 1 is from the final return) which will equal 120! (the exclamation point is for excitement, no more math).<br><br>
+
+        &emsp;&emsp;&emsp;Now you may be thinking, why would you even use recursion when you could just use a for loop? I also asked myself this question when I first heard of recursion. But not only is the use of recursion more elegant and take up less space in your code, it can solve problems that are beyond the capacity of for loops. One example where this is true would be permutation calculations. Permutations are the different combinations of a grouping of items or numbers that can be created given a certain amount of empty slots. Let's look at  a permutation generator that I have worked through myself and se how it uses recursion to return all the permutations of a string:
+
+<div class="tab">
+        function perm(string) {<br>
+        &emsp;  var result = [];<br><br>
+
+        &emsp;  if(string.length === 1) {<br>
+        &emsp;&emsp;    result.push(string);<br>
+        &emsp;&emsp;    return result;<br>
+        &emsp;  }<br><br>
+
+        &emsp;  for(var i = 0; i < string.length; i++) {<br>
+        &emsp;&emsp;    var fixed = string[i];<br>
+        &emsp;&emsp;    var sub = string.substring(0, i) + string.substring(i + 1);<br>
+        &emsp;&emsp;    var subPermutations = perm(sub);<br>
+        &emsp;&emsp;    for(var j = 0; j < subPermutations.length; j++) {<br>
+        &emsp;&emsp;&emsp;      result.push(fixed + subPermutations[j]);<br>
+        &emsp;&emsp;    }<br>
+        &emsp;  }<br>
+        &emsp;  return result;<br>
+        }
+</div>
+
+        &emsp;&emsp;&emsp;At first look this looks simple enough...that is until you see the recursion and then your brain shuts off. Do not fret! All will be explained.<br><br>
+
+        &emsp;&emsp;&emsp;This function will take a string as an argument and from there create different permutations using both for loops and recursion. If we follow the code, we see that the first line sets up an array to hold the permutation results as we continue to loop through the permutations. After this, the if statement checks to see if the string.length is 1, if it is then it will push this to the result array and then return the result array.
+
+<div class="tab">
+        	if(string.length === 1) {<br>
+        	&emsp;    result.push(string);<br>
+        	&emsp;   return result;<br>
+        	  }
+</div>
+
+        (This will make sense once we go through the rest of the function).<br><br>
+
+        From here, the function goes through a for loop.
+<div class="tab">
+        	for(var i = 0; i < string.length; i++) {<br>
+        	&emsp;    var fixed = string[i];<br>
+        	&emsp;    var sub = string.substring(0, i) + string.substring(i + 1);<br>
+        	&emsp;    var subPermutations = perm(sub);
+</div>
+        &emsp;&emsp;&emsp;This for loop sets one variable as the fixed variable at the index of i. It then sets a variable sub for the rest of the string. The other variable set is subPermutations variable which stores perm(sub) which calls the function again with the argument being the sub vairable which is the rest of the string that was not set as fixed. After setting these variables are set, the function then creates another for loop with var j.
+
+<div class="tab">
+        	for(var j = 0; j < subPermutations.length; j++) {<br>
+        	&emsp;      result.push(fixed + subPermutations[j]);<br>
+        	}
+</div>
+        &emsp;&emsp;&emsp;This then iterates subPermutations and adds the fixed variabel with the current index of subPermutations. After looping through all of this, the funtion finally returns result.
+<div class="tab">
+        	return result;
+</div>
+        &emsp;&emsp;&emsp;Now all of that is very convoluted and is hard to visualize. A tactic that has worked well for me and that I encourage you to use is to console out portions of the code to be able to see how the function is working through the argument. Here is where I added in some console.log's:
+
+<div class="tab">
+        function perm(string) {<br>
+        &emsp;  var result = [];<br><br>
+
+        &emsp;  if(string.length === 1) {<br>
+        &emsp;&emsp;    result.push(string);<br>
+        &emsp;&emsp;    console.log(string);<br>
+        &emsp;&emsp;    console.log(result);<br>
+        &emsp;&emsp;    return result;<br>
+        &emsp;  }<br><br>
+
+        &emsp;  for(var i = 0; i < string.length; i++) {<br>
+        &emsp;&emsp;    var fixed = string[i];<br>
+        &emsp;&emsp;    var sub = string.substring(0, i) + string.substring(i + 1);<br>
+        &emsp;&emsp;    var subPermutations = perm(sub);<br>
+        &emsp;&emsp;    for(var j = 0; j < subPermutations.length; j++) {<br>
+        &emsp;&emsp;&emsp;      console.log(fixed + subPermutations[j]);<br>
+        &emsp;&emsp;&emsp;      result.push(fixed + subPermutations[j]);<br>
+        &emsp;&emsp;    }<br>
+        &emsp;  }<br>
+        &emsp;  console.log(result);<br>
+        &emsp;  return result;<br>
+        }
+</div>
+
+        When calling this function with the string "toy" we get this result:
+<div class="tab">
+        y<br>
+        ["y"]<br>
+        oy<br>
+        o<br>
+        ["o"]<br>
+        yo<br>
+        ["oy", "yo"]<br>
+        toy<br>
+        tyo<br>
+        y<br>
+        ["y"]<br>
+        ty<br>
+        t<br>
+        ["t"]<br>
+        yt<br>
+        ["ty", "yt"]<br>
+        oty<br>
+        oyt<br>
+        o<br>
+        ["o"]<br>
+        to<br>
+        t<br>
+        ["t"]<br>
+        ot<br>
+        ["to","ot"]<br>
+        yto<br>
+        yot<br>
+        ["toy", "tyo", "oty", "oyt", "yto", "yot"]<br>
+        ["toy", "tyo", "oty", "oyt", "yto", "yot"]
+</div>
+
+        &emsp;&emsp;&emsp;This jumble of random letters actually brings insight into the inner workings of the function. The first log is the letter y which is what was consoled out when we asked the function what string was inside the if statement.
+<div class="tab">
+        	if(string.length === 1) {<br>
+        	&emsp;    result.push(string);<br>
+        	&emsp;    console.log(string);<br>
+        	&emsp;    console.log(result);<br>
+        	&emsp;    return result;<br>
+        	  }
+</div>
+        &emsp;&emsp;&emsp;After that, we get the log of the variable result. This shows us that the variable continued to create smaller and smaller substrings of the original string until it reached one letter. This then becomes the stored variable in result once the argument passed into the function is one letter which in this case is "y".<br><br>
+
+        From here the function goes back to the j for loop.
+
+<div class="tab">
+        	for(var i = 0; i < string.length; i++) {<br><br>
+        	&emsp;    var fixed = string[i];<br>
+        	&emsp;    var sub = string.substring(0, i) + string.substring(i + 1);<br>
+        	&emsp;    var subPermutations = perm(sub);<br>
+        	&emsp;    for(var j = 0; j < subPermutations.length; j++) {<br>
+        	&emsp;&emsp;      console.log(fixed + subPermutations[j]);<br>
+        	&emsp;&emsp;      result.push(fixed + subPermutations[j]);<br>
+        	&emsp;    }<br>
+        	  }
+</div>
+
+        &emsp;&emsp;&emsp;Since "o" was set as fixed in this case, the log spits out "oy". From here we go back to the first for loop which is still within the first fixed letter of "t" and set the next fixed variable to be "y" since the value of i grows by 1. Then we continue from there and get the console log back of o and ["o"] which comes from the first if statement just like before. We then follow the function back to the j for loop and get the output "oy". This then ends the loop for the two substring iterations of fixed letter "t" which gives us the return of ["oy", "yo"] followed by the console of toy and tyo that occur within the j loop of the first i loop. This then continues for each fixed variable of the string until the final return outputs all the permutations.<br><br>
+
+        &emsp;&emsp;&emsp;As you can see, the recursive function uses the same variables and stores different values in them depending on the level of recursion that the function is in. This is imperative to making complex recursive functions such as this one. The result variable in this case stores each level's return value which will then be added into the overall result variable at the end of the function.<br><br>
+
+        &emsp;&emsp;&emsp;Recursion is a tricky subject, hopefully through this example you can have a better idea of how it works. Once understood, recursion is a clean way of solving problems you will come across in your code. Thank you for reading my first blog post! I hope I didn't confuse you and maybe helped you learn something!<br><br>
+
+        Ivan Raffucci
+
+      </span>
+      <div class="right">
+        >
+      </div>
+    </div>
+
+    </div>
+    <script type="text/javascript" src="../javascript/posts-js.js"></script>
+  </body>
+</html>

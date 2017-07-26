@@ -15,7 +15,7 @@ function carousel(dir) {
       num = num + 1
     }
     $("#landing").css({
-      "background-image" : "url('./images/p" + num + ".jpg')"
+      "background-image" : "url('./css/images/p" + num + ".jpg')"
     })
   }
   if(dir == "l") {
@@ -26,7 +26,7 @@ function carousel(dir) {
       num = num - 1
     }
     $("#landing").css({
-      "background-image" : "url('./images/p" + num + ".jpg')"
+      "background-image" : "url('./css/images/p" + num + ".jpg')"
     })
   }
 }

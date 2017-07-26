@@ -8,9 +8,9 @@ function openRaincheck() {
 }
 
 function openJK() {
-  window.open("/portfolio/index.html")
+  window.open("./Portfolio/index.html")
 }
 
 function openTokiwa() {
-  window.open("/tokiwa/index.html")
+  window.open("./Tokiwa/index.html")
 }

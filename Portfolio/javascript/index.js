@@ -51,7 +51,7 @@ function preloadImages() {
   let imgArray = ["p0", "p1", "p2", "p3", "p4", "p5"];
 
   for(var i = 0; i < imgArray.length; i++) {
-    $('<img />').attr('src', "images/" + imgArray[i] + ".jpg").appendTo('body').css('display', 'none');
+    $('<img />').attr('src', "./css/images/" + imgArray[i] + ".jpg").appendTo('body').css('display', 'none');
   }
 }
 

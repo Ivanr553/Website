@@ -191,10 +191,11 @@ section {
   background-position: center;
   width: 35vw;
   height: 20vw;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: 10px; }
 
 .project-info {
-  width: 30vw;
+  width: 35vw;
   height: auto;
   margin-left: 5vw;
   font-size: 1.2em; }
@@ -205,18 +206,18 @@ section {
 #carla-info {
   margin-right: 10vw; }
 
-#jk-image {
-  background-image: url("../images/jk.jpg");
+#thh-image {
+  background-image: url("../images/thh.jpg");
   margin-left: 5vw; }
 
-#jk-info {
+#thh-info {
   margin: 0;
   margin-left: 10vw; }
 
-#tokiwa-image {
-  background-image: url("../images/tokiwa.jpg"); }
+#kmp-image {
+  background-image: url("../images/kmp.jpg"); }
 
-#tokiwa-info {
+#kmp-info {
   margin-right: 10vw; }
 
 #raincheck-image {
@@ -333,8 +334,8 @@ section {
 #html-icon {
   background-image: url("../images/html.png"); }
 
-#ang-icon {
-  background-image: url("../images/angular2.png"); }
+#react-icon {
+  background-image: url("../images/react.png"); }
 
 #node-icon {
   background-image: url("../images/node.png"); }

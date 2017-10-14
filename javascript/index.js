@@ -7,10 +7,10 @@ function openRaincheck() {
   window.open("https://tranquil-chamber-53541.herokuapp.com/")
 }
 
-function openJK() {
-  window.open("./Portfolio/index.html")
+function openthh() {
+  window.open("https://ivanr553.github.io/Trusting-Hand-Homecare/")
 }
 
-function openTokiwa() {
-  window.open("./Tokiwa/index.html")
+function openkmp() {
+  window.open("https://keep-me-posted.herokuapp.com/")
 }

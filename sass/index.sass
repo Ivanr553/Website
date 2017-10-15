@@ -1,3 +1,4 @@
+//==================== ELEMENT STYLING =======================
 body, html
   padding: 0
   margin: 0
@@ -13,15 +14,18 @@ section
   @media screen and (max-width: 1050px)
     height: 50vh
 
-//generic classes
+
+//===================== REUSED CLASSES =========================
 .title-blue
   color: rgb(44, 112, 247)
   font-size: 1.7em
 
-//Landing Section
+
+//======================== LANDING =============================
 #landing
   @media screen and (max-width: 1000px)
     height: 50vh
+
 
 //Logo
 #name
@@ -38,6 +42,7 @@ section
   margin-top: -0.8vh
   color: rgba(40, 101, 226, 1)
 
+
 //Portrait
 #portrait
   width: 25vw
@@ -45,13 +50,11 @@ section
   position: absolute
   left: 10vw
   top: 20vh
-  // @media screen and (max-width: 1000px)
-  //   left: 13vw
-  //   top: 33vh
   border-radius: 100vw
   background-image: url("../images/portrait-edit.jpg")
   background-size: cover
   background-position: bottom right
+
 
 //Landing information
 #landing-info
@@ -75,7 +78,7 @@ section
   border-bottom: solid 2px grey
 
 
-//Pre-Projcts section
+//===================== PRE PROJECT ==========================
 #pre-projects
   position: relative
 
@@ -111,7 +114,7 @@ section
   text-align: right
 
 
-//Projects Section
+//===================== PROJECTS ==========================
 #projects
   position: relative
   height: auto
@@ -120,6 +123,7 @@ section
   flex-direction: column
   align-items: center
   justify-content: center
+
 
 //Divider
 .divider
@@ -160,12 +164,14 @@ section
   margin-left: 5vw
   font-size: 1.2em
 
+
 //Carla projects section
 #carla-image
   background-image: url("../images/carla.jpg")
 
 #carla-info
   margin-right: 10vw
+
 
 //thh projects section
 #thh-image
@@ -176,12 +182,14 @@ section
   margin: 0
   margin-left: 10vw
 
+
 //kmp projects section
 #kmp-image
   background-image: url("../images/kmp.jpg")
 
 #kmp-info
   margin-right: 10vw
+
 
 //Raincheck projects section
 #raincheck-image
@@ -192,7 +200,8 @@ section
   margin: 0
   margin-left: 10vw
 
-//Pre-skills Section
+
+//===================== PRE SKILLS =======================
 #pre-skills
   position: relative
   display: flex
@@ -202,6 +211,7 @@ section
   height: 80vh
   @media screen and (max-width: 1000px)
     height: 40vh
+
 
 //Pre-skills Content
 #pre-skills-content
@@ -216,7 +226,8 @@ section
   font-weight: bold
   font-family: sans-serif
 
-//skills section
+
+//======================= SKILLS =========================
 #skills
   position: relative
   display: flex
@@ -229,10 +240,9 @@ section
     flex-direction: column
     height: auto
 
-//Skills
 .skill-container
   width: 30vw
-  height: 90%
+  height: 100%
   margin-left: 1.5%
   background-color: rgba(0, 0, 0, 0.1)
   display: flex
@@ -246,6 +256,8 @@ section
     margin-top: 2vh
     font-size: 1.4em
 
+
+//skill icons
 .skill-icon
   border-radius: 150vw
   width: 13vw
@@ -262,6 +274,8 @@ section
 #node-icon
   background-image: url("../images/node.png")
 
+
+//skill content
 .skill-content
   width: 85%
   height: 35%
@@ -269,7 +283,7 @@ section
   margin-top: 5vh
 
 
-//Contact Section
+//===================== CONTACT =======================
 #contact
   height: 100vh
   @media screen and (max-width: 1000px)
@@ -280,19 +294,19 @@ section
   align-items: center
   justify-content: center
 
+
 //Framing Bars
 .bar
   width: 100%
   height: 10vh
-  // background-color: rgba(0, 0, 0, 0.4)
   position: absolute
 
 #top-bar
   top: 0
 
 #bottom-bar
-  // background-color: rgba(0, 0, 0, 0.5)
   bottom: 0
+
 
 //Contact Content
 #contact-content-1
@@ -315,6 +329,7 @@ section
   margin-top: 4vh
   margin-bottom: 3vh
 
+
 //Contact Bar for links
 #contact-bar
   display: flex
@@ -322,6 +337,7 @@ section
   align-items: center
   justify-content: center
   margin-top: 3vh
+
 
 //Contact Buttons/links
 .contact-button
@@ -348,7 +364,8 @@ section
   background-image: url("../images/resume.png")
   border: solid 1px grey
 
-//Signature
+
+//======================= SIGNATURE =========================
 #signature
   position: absolute
   bottom: 0
@@ -357,7 +374,7 @@ section
   color: rgba(0, 0, 0, 0.9)
 
 
-//Animations
+//====================== ANIMATIONS ========================
 @keyframes grow
   0%
     transform: scale(1)

@@ -71,6 +71,20 @@ var Animations = {
         },
         1500
       )
+    },
+
+    skills: function() {
+      setTimeout(
+        function() {
+          $('#skills').css({
+            display: 'flex',
+            animation: 'fade-in 1s forwards'
+          })
+
+          State.view = 'skills'
+        },
+        1500
+      )
     }
 
 
@@ -89,8 +103,8 @@ var Animations = {
         Animations.exit.projects()
       }
 
-      if(State.view === 'about') {
-        Animations.exit.about()
+      if(State.view === 'skills') {
+        Animations.exit.skills()
       }
 
       if(State.view === 'contact') {
@@ -153,6 +167,17 @@ var Animations = {
           $('#projects').css({display: 'none'})
       }, 1500)
       
+    },
+
+    skills: function() {
+      $('#skills').css({
+        animation: 'fade-out 1.5s forwards'
+      })
+
+      setTimeout(
+        function() {
+          $('#skills').css({display: 'none'})
+        }, 1500)
     }
 
   },
@@ -213,6 +238,22 @@ var Open =  {
     State.animating = true
     Animations.exit.default()
     Animations.enter.projects()
+
+    setTimeout(function() {
+      State.animating = false
+    }, 5000)
+
+  },
+
+  skills: function() {
+
+    if(State.view === 'skills') {
+      return
+    }
+
+    State.animating = true
+    Animations.exit.default()
+    Animations.enter.skills()
 
     setTimeout(function() {
       State.animating = false

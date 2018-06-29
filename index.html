@@ -1,9 +1,11 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>IR: Web Developer</title>
     <link rel="stylesheet" href="css/index-1.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
 
@@ -13,23 +15,21 @@
 <header>
   <div id='header-background-1' class="header-background"></div>
   <div id='header-background-2' class="header-background"></div>
-    <div onclick='Open.landing()' id='header-name' class="header-text header-link">
-        Ivan Raffucci
-    </div>
+  <img onclick='Open.landing()' id='header-logo' src="./images/logo.png" alt="">
   <div id='header-links-container'>
-    <div class='header-text header-link' onclick='Open.projects()'>Projects</div>
+    <div class='header-text header-link' onclick='Open.projects()'>Work</div>
     <div class='header-text header-link' onclick='Open.skills()'>Skills</div>
-    <!-- <div class='header-text header-link'>Contact</div> -->
+    <div class='header-text header-link' onclick='Open.contact()'>Contact</div>
   </div>
 </header>
 
 <!-- ======================== Landing =========================== -->
 <section id="landing">
 
-  <img class='landing-png' id='react-png' src="./images/react.png" alt="">
-  <img class='landing-png' id='node-png' src="./images/node.png" alt="">
-  <img class='landing-png' id='js-png' src="./images/js.png" alt="">
-  <img class='landing-png' id='html-sass-png' src="./images/html-edit.png" alt="">
+    <img class='landing-png' id='react-png' src="./images/react.png" alt="">
+    <img class='landing-png' id='node-png' src="./images/node.png" alt="">
+    <img class='landing-png' id='js-png' src="./images/js.png" alt="">
+    <img class='landing-png' id='html-sass-png' src="./images/html-edit.png" alt="">
 
   <div class="flex-box-container-column">
     <div id="landing-center-text">
@@ -52,10 +52,6 @@
     </div>
   </div>
 
-  <div id="landing-bottom-text">
-    <!-- Scroll Down to see Projects -->
-  </div>
-
 </section>
 
 <!-- ======================== Projects =========================== -->
@@ -72,7 +68,7 @@
       <div class="project-title">Keep Me Posted</div>
       <div class="project-skills"><span class='black bold'>Skills: < </span> React <span class='black'>-</span> Node.js <span class='black'> /> </span></div>
       <div onclick="openkmp()" class="project-link">Visit Site</div>
-      Keep Me Posted is a project that I have been working on with two other programmers to provide an accessible application for tracking waitlisted classes. As the web developer for this project, I created a Node.js server with express and mongoose for routing and database management. The front of the site is then made with react and bundled with webpack. We plan to have the site completed by November 2017.
+      Keep Me Posted is a project that I have been working on with two other programmers to provide an accessible application for tracking waitlisted classes. As the web developer for this project, I created a Node.js server with express and mongoose for routing and database management. The front of the site is then made with react and bundled with webpack.
     </div>
   </div>
 
@@ -90,7 +86,20 @@
 
   <div class="divider"></div>
 
-  <div class="project-container project-container-left">
+  <div class="project-container">
+    <div id="groups-container">
+      <div id='groups-title' class="project-title">Groups I've Worked For</div>
+      <div id='project-logo-container'>
+        <img src="./images/MainElectric.jpg" onclick='openME()' alt="" class='project-logo'>
+        <img src="./images/USMC.jpg" onclick='openMarines()' alt="" class='project-logo'>
+        <img src="./images/md5_logo.png" onclick='openMD5()' alt="" class='project-logo'>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- <div class="project-container project-container-left">
     <div id='s7-image' class="project-image"></div>
     <div class="project-info">
       <div class="project-title">Scale 7: Service Platform</div>
@@ -100,17 +109,17 @@
     </div>
   </div>
 
-  <div class="divider"></div>
+  <div class="divider"></div> -->
 
 
-  <div class="project-container project-container-right">
+  <div class="project-container project-container-left">
+    <div id='mapr-image' class="project-image"></div>
     <div class="project-info">
       <div class="project-title">Marine Corps Permit Repository</div>
       <div class="project-skills"><span class='black bold'>Skills: < </span> React <span class='black'>-</span> Node.js <span class='black'>-</span> Sass <span class='black'>-</span> Typescript <span class='black'> /> </span></div>
       <div class="project-link project-link-inactive">Project In Progress</div>
         The Marine Corps Permit Repository is a prototype for a platform that will aim to diminish paperwork processing for the marine corps. The web application will allow users to view, approve, and create pdf permits on both desktop and mobile devices and will seamlessly connect to the current user profiles of the marines. Our team plans to complete this project in April 2018.
     </div>
-    <div id='mapr-image' class="project-image"></div>
   </div>
 
   <div class="divider"></div>
@@ -143,6 +152,34 @@
     <div class="skill-content" id="node-content">
       For all of my backend coding, I use Node.js. Node allows for the use of one language throughout the entire stack, javascript, which has become the used programming language in my kit aside from html and css. Along with the use of Express, Mongoose, and NPM, I have created applications with fully functioning databases and dynamic interfaces.
     </div>
+  </div>
+
+</section>
+
+
+<!-- ======================== Contact =========================== -->
+
+<section id='contact'>
+
+  <div class="bar" id="top-bar"></div>
+
+  <div id="contact-title">
+    Let's get in touch
+  </div>
+
+
+  <div class="divider" id="contact-divider"></div>
+
+
+  <div id="contact-email">
+    <a id="contact-email-link" href="mailto:ivanr553@gmail.com">ivanr553@gmail.com</a>
+  </div>
+
+  <div id="contact-bar">
+    <a class="contact-button" href="https://github.com/Ivanr553" target="_blank" id="github"></a>
+    <a class="contact-button" href="https://www.linkedin.com/in/ivan-manuel-raffucci-16b828114/" target="_blank" id="linkedin"></a>
+    <!-- <a class="contact-button" href="https://codepen.io/ivanr553/pens/public/" target="_blank" id="codepen"></a> -->
+    <a class="contact-button" href="https://docs.google.com/document/d/11FVutbAqGlW-ed21noWJjcvyhz3PD-tlZCktaGxMQfU/edit?usp=sharing" target="_blank" id="resume"></a>
   </div>
 
 </section>

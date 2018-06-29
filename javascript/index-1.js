@@ -1,3 +1,16 @@
+//Links
+function openME() {
+  window.open('http://www.mainelectricsupply.com/')
+}
+
+function openMarines() {
+  window.open('https://www.marines.com/')
+}
+
+function openMD5() {
+  window.open('https://community.md5.net/md5/landing')
+}
+
 var State = {
   view: 'landing',
   animating: false
@@ -85,8 +98,21 @@ var Animations = {
         },
         1500
       )
-    }
+    },
 
+    contact: function() {
+      setTimeout(
+        function() {
+          $('#contact').css({
+            display: 'flex',
+            animation: 'fade-in 1s forwards'
+          })
+
+          State.view = 'contact'
+        },
+        1500
+      ) 
+    }
 
 
   },
@@ -178,6 +204,17 @@ var Animations = {
         function() {
           $('#skills').css({display: 'none'})
         }, 1500)
+    },
+
+    contact: function() {
+      $('#contact').css({
+        animation: 'fade-out 1.5s forwards'
+      })
+
+      setTimeout(
+        function() {
+          $('#contact').css({display: 'none'})
+        }, 1500)
     }
 
   },
@@ -257,6 +294,22 @@ var Open =  {
 
     setTimeout(function() {
       State.animating = false
+    }, 5000)
+
+  },
+
+  contact: function() {
+
+    if(State.view === 'contact') {
+      return
+    }
+
+    State.animation = true
+    Animations.exit.default()
+    Animations.enter.contact()
+
+    setTimeout(function() {
+      State.animation = false
     }, 5000)
 
   }

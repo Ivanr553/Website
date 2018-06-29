@@ -29,7 +29,7 @@ html {
 
 section {
   width: 100%;
-  overflow-y: hidden;
+  overflow-x: hidden;
   height: 100vh;
   position: relative; }
 
@@ -64,17 +64,17 @@ header {
   z-index: 0; }
 
 #header-background-1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(transparent));
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), transparent);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.25), transparent);
-  background: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
   opacity: 1; }
 
 #header-background-2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(transparent));
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), transparent);
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.25), transparent);
-  background: linear-gradient(rgba(0, 0, 0, 0.25), transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.25)), to(rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
   -webkit-animation: fade-out 0.5s forwards;
   animation: fade-out 0.5s forwards;
   opacity: 0; }
@@ -93,7 +93,7 @@ header:hover > #header-background-2 {
 
 .flex-box-container-column {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,22 +118,54 @@ header:hover > #header-background-2 {
 .bold {
   font-weight: bold; }
 
-.header-text {
-  cursor: pointer;
-  width: auto; }
-
 .header-link {
   margin-right: 2vw;
   -webkit-animation: fade-out-accent 0.2s forwards, shrink 0.5s ease forwards;
-  animation: fade-out-accent 0.2s forwards, shrink 0.5s ease forwards; }
+  animation: fade-out-accent 0.2s forwards, shrink 0.5s ease forwards;
+  cursor: pointer;
+  font-size: 1em; }
+  @media screen and (max-width: 1000px) {
+    .header-link {
+      font-size: 1.25em; } }
+  @media screen and (max-width: 800px) {
+    .header-link {
+      font-size: 1.5em; } }
+  @media screen and (max-width: 600px) {
+    .header-link {
+      font-size: 2em; } }
 
 #header-name-wrapper {
   width: auto; }
 
-#header-name {
+#header-logo-container {
   font-weight: bold;
+  width: auto;
   opacity: 0.9;
   z-index: 2; }
+  @media screen and (max-width: 600px) {
+    #header-logo-container {
+      width: 75%; } }
+
+#header-logo {
+  width: 40%;
+  height: auto;
+  cursor: pointer;
+  -webkit-animation: fade-out-logo 0.5s forwards;
+  animation: fade-out-logo 0.5s forwards;
+  z-index: 500; }
+  @media screen and (min-width: 600px) {
+    #header-logo {
+      width: 30%; } }
+  @media screen and (min-width: 800px) {
+    #header-logo {
+      width: 15%; } }
+  @media screen and (min-width: 1500px) {
+    #header-logo {
+      width: 10%; } }
+
+#header-logo:hover {
+  -webkit-animation: fade-in-logo 0.5s forwards;
+  animation: fade-in-logo 0.5s forwards; }
 
 #header-links-container {
   display: -webkit-box;
@@ -160,8 +192,9 @@ header:hover > #header-background-2 {
   animation: fade-in-accent 0.5s forwards, grow 0.5s ease forwards; }
 
 #landing {
-  width: 100%;
-  color: black; }
+  width: 100vw;
+  color: black;
+  overflow: hidden; }
 
 #landing-center-text {
   cursor: default;
@@ -171,11 +204,15 @@ header:hover > #header-background-2 {
   font-weight: bold;
   z-index: 1;
   text-shadow: 15px 10px 12px rgba(0, 0, 0, 0.2);
-  border-bottom: solid 3px rgba(255, 255, 255, 0.7);
+  border-bottom: solid 3px;
   border-color: #ff8c3f;
+  border-color: #a0caef;
   padding: 0 5vw 2.5vh 0;
   position: relative;
   color: #4f7dc6; }
+
+.overflow-container {
+  overflow: hidden; }
 
 .landing-center-text-animated {
   -webkit-animation: shrink 0.5s ease forwards;
@@ -361,6 +398,32 @@ header:hover > #header-background-2 {
     #projects-title {
       margin-bottom: 10vh; } }
 
+#project-logo-container {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 33%; }
+  @media screen and (max-width: 800px) {
+    #project-logo-container {
+      width: 50%; } }
+
+.project-logo {
+  width: 25%;
+  height: auto;
+  margin-left: 10px;
+  cursor: pointer; }
+
 .divider {
   border-top: solid 1px rgba(0, 0, 0, 0.1);
   width: 70%;
@@ -443,6 +506,27 @@ header:hover > #header-background-2 {
   color: black;
   font-family: 'Montserrat', sans-serif; }
 
+#groups-container {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+#groups-title {
+  width: 100vw;
+  text-align: center; }
+
 .project-skills {
   color: #ff9a56; }
 
@@ -489,12 +573,12 @@ header:hover > #header-background-2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: auto;
-  margin-top: 5vh;
+  min-height: 100vh;
   opacity: 0; }
   @media screen and (max-width: 1000px) {
     #skills {
-      margin-bottom: 0;
+      margin-top: 7.5vh;
+      margin-bottom: 5vh;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -552,9 +636,7 @@ header:hover > #header-background-2 {
 #contact {
   height: 100vh;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -564,7 +646,8 @@ header:hover > #header-background-2 {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  opacity: 0; }
   @media screen and (max-width: 1000px) {
     #contact {
       height: 50vh; } }
@@ -580,25 +663,32 @@ header:hover > #header-background-2 {
 #bottom-bar {
   bottom: 0; }
 
-#contact-content-1 {
+#contact-title {
   font-size: 3em;
-  color: #2c70f7;
+  color: #7d7d7d;
   font-weight: bold; }
 
 #contact-email {
-  font-size: 1.5em; }
+  font-size: 2em; }
 
 #contact-email-link {
-  color: #323232;
   text-decoration: none;
   font-weight: bold;
-  font-style: Times; }
+  font-style: Times;
+  border: solid 2px #4f7dc6;
+  padding: 0.75em;
+  color: #4f7dc6;
+  border-radius: 5px; }
+  @media screen and (min-width: 800px) {
+    #contact-email-link {
+      font-size: 0.6em; } }
 
 #contact-divider {
-  width: 20vw;
+  width: 25vw;
   height: 1vh;
   margin-top: 4vh;
-  margin-bottom: 3vh; }
+  margin-bottom: 5vh;
+  margin-left: 0; }
 
 #contact-bar {
   display: -webkit-box;
@@ -614,16 +704,32 @@ header:hover > #header-background-2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 3vh; }
+  margin-top: 5vh; }
+  @media screen and (max-width: 800px) {
+    #contact-bar {
+      margin-top: 7.5vh; } }
 
 .contact-button {
-  width: 4.5vw;
-  height: 4.5vw;
   border-radius: 100vw;
   margin-left: 1vw;
   cursor: pointer;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  width: 4.5vw;
+  height: 4.5vw; }
+  @media screen and (max-width: 1000px) {
+    .contact-button {
+      width: 8vw;
+      height: 8vw; } }
+  @media screen and (max-width: 800px) {
+    .contact-button {
+      width: 15vw;
+      height: 15vw;
+      margin-left: 5vw; } }
+
+#contact-email-link:hover {
+  color: white;
+  background-color: #4f7dc6; }
 
 #github {
   background-image: url("../images/git-edit.png");
@@ -862,3 +968,27 @@ header:hover > #header-background-2 {
     background-color: rgba(79, 125, 198, 0); }
   100% {
     background-color: #4f7dc6; } }
+
+@-webkit-keyframes fade-in-logo {
+  0% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in-logo {
+  0% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-out-logo {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.8; } }
+
+@keyframes fade-out-logo {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.8; } }

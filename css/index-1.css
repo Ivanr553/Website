@@ -648,9 +648,6 @@ header:hover > #header-background-2 {
   -ms-flex-pack: center;
   justify-content: center;
   opacity: 0; }
-  @media screen and (max-width: 1000px) {
-    #contact {
-      height: 50vh; } }
 
 .bar {
   width: 100%;

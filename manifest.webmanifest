@@ -1,0 +1,10 @@
+{
+    "name": "IR Web Development",
+    "short_name": "IR Web",
+    "start_url": "/",
+    "icons": [{
+        "src": "./images/app-icon.png",
+        "sizes": "150x150",
+        "type": "image/png"
+    }]
+}

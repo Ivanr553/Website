@@ -11,6 +11,26 @@ function openMD5() {
   window.open('https://community.md5.net/md5/landing')
 }
 
+function openCarla() {
+  window.open("http://carlakunkelweb.github.io/website/")
+}
+
+function openkmp() {
+  window.open("https://keep-me-posted.herokuapp.com/")
+}
+
+function openkmpsource() {
+  window.open("https://github.com/Ivanr553/KeepMePosted")
+}
+
+function openmapr() {
+  window.open("http://marinepermitpalace.azurewebsites.net/A/App/Home")
+}
+
+function openmaprsource() {
+  window.open("https://github.com/Ivanr553/MaPR")
+}
+
 var State = {
   view: 'landing',
   animating: false
@@ -317,11 +337,3 @@ var Open =  {
 }
 
 
-//Links
-function openCarla() {
-  window.open("http://carlakunkelweb.github.io/website/")
-}
-
-function openkmp() {
-  window.open("https://keep-me-posted.herokuapp.com/")
-}
